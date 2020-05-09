@@ -1,0 +1,170 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ThirtyDayTrialDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "237 110";
+      extent = "326 380";
+      minExtent = "8 2";
+      visible = "1";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "0";
+      canClose = "0";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiButtonCtrl(TDT_regbtn) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "123 338";
+         extent = "80 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ThirtyDayTrialDlg.pushRegisterBtn();";
+         text = "Register";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiMLTextCtrl(TDT_text) {
+         profile = "GuiMLTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 290";
+         extent = "244 14";
+         minExtent = "8 2";
+         visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+      new GuiButtonCtrl(TDT_ok) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "33 338";
+         extent = "80 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ThirtyDayTrialDlg.pushOkBtn();";
+         text = "Ok";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiColouredBox() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 30";
+         extent = "306 256";
+         minExtent = "8 2";
+         visible = "1";
+         color = "255 255 255 255";
+         color2 = "0 0 0 255";
+         opaque = "1";
+         gradientDir = "0";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "25 0";
+            extent = "256 256";
+            minExtent = "8 2";
+            visible = "1";
+            bitmap = "./productlogo";
+            wrap = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiText24Profile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "85 175";
+            extent = "136 28";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Tryout Version";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "36 205";
+            extent = "234 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "This tryout version will expire after a limited time.";
+            maxLength = "255";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "46 225";
+            extent = "213 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Purchase today at www.garagegames.com";
+            maxLength = "255";
+         };
+      };
+      new GuiProgressCtrl(TDT_progress) {
+         profile = "GuiProgressProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 308";
+         extent = "306 20";
+         minExtent = "8 2";
+         visible = "1";
+      };
+      new GuiButtonCtrl(TDT_purbtn) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "213 338";
+         extent = "80 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "ThirtyDayTrialDlg.pushPurchaseBtn();";
+         text = "Purchase";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+function ThirtyDayTrialDlg::onWake(%this)
+{
+   TDT_text.setText( wpbGetEvalDays() @ " out of " @ wpbGetMaxEvalDays() @ " days evaluated." );
+
+   %percent = wpbGetEvalDays() / wpbGetMaxEvalDays();
+   TDT_progress.setValue( %percent );
+}
+
+function ThirtyDayTrialDlg::pushRegisterBtn(%this)
+{
+   Canvas.pushDialog(RegisterDlg);
+}
+
+function ThirtyDayTrialDlg::pushPurchaseBtn(%this)
+{
+   gotoWebPage("http://www.garagegames.com/pg/product/view.php?id=59");
+}
+
+function ThirtyDayTrialDlg::pushOkBtn(%this)
+{
+   Canvas.popDialog(ThirtyDayTrialDlg);
+}

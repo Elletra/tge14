@@ -1,0 +1,17 @@
+<lmargin%:2><just:center><bitmap:demo/client/ui/platform/torqueplatform><just:left>
+
+
+
+
+<font:Arial Bold:24>Torque for Xbox 360 and Beyond...
+<font:Arial:16><lmargin%:5><just:right><bitmap:demo/client/ui/platform/Xbox360><just:left>
+Text Coming soon...
+
+<font:Arial Bold:16>Why use the Torque Platform for your Console Game?<font:Arial:16>
+
+Here are just a few reasons...
+
+<lmargin%:5>- Blah
+- Blah
+- Blah
+- Blah

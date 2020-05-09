@@ -1,0 +1,33 @@
+new SimSet(guiClipboard) {
+
+   new GuiBitmapButtonCtrl() {
+      Profile = "GuiButtonProfile";
+      HorizSizing = "relative";
+      VertSizing = "relative";
+      position = "22 280";
+      Extent = "182 58";
+      MinExtent = "8 2";
+      Visible = "1";
+      Command = "Theo.setFile(\"demo/data/video/areTorquePopular.ogg\");";
+      text = "Button";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "demo/client/ui/theora/button";
+         helpTag = "0";
+
+      new GuiMLTextCtrl() {
+         Profile = "GuiMLTextNoSelectProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         position = "9 7";
+         Extent = "100 42";
+         MinExtent = "8 2";
+         Visible = "1";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+         text = "<color:ffffff><font:Arial Bold:14>A demo of \nsome of Torque\'s \nlovely goodness.";
+            helpTag = "0";
+      };
+   };
+};

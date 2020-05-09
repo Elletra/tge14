@@ -1,0 +1,9 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/products/rocketbowl_box><just:left>
+<font:Arial Bold:24>RocketBowl Plus
+<font:Arial Bold:16>Developer:<font:Arial:16> Large Animal
+<font:Arial Bold:16>Publisher:<font:Arial:16> GarageGames
+<font:Arial Bold:16>Availability:<font:Arial:16> GarageGames.com
+
+RocketBowl Plus puts a futuristic twist on the traditional bowling experience. Bowl across the rolling contours of the RocketBowl Dome at the 1958 Kalamazoo Worlds Fair. Use special rocket-powered bowling balls to curve, boost, and hop your way over hills, around water traps, across bridges, and through winding chutes, all at a fun and relaxing pace. Knock over special 'dollar pins', collect bonus coins, and wager on matches against local pros to fatten your wallet and buy more advanced RocketBowl balls.
+
+<just:center><bitmap:demo/client/ui/products/rocketbowl_ss>

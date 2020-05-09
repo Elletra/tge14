@@ -1,0 +1,8 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/features/tge>
+<just:left><font:Arial Bold:18>The Torque Game Engine<font:Arial:16>
+<lmargin%:5>The Torque Game Engine (TGE) is a full featured AAA game engine with award winning multiplayer network code, seamless indoor/outdoor rendering engines, state of the art skeletal animation, drag and drop GUI creation, a built in world editor, and a C-like scripting language. Unlike most commercial game engines, as part of the low cost license, you receive all C++ source code to the engine and built in tools, so you can customize the engine and make your game perform exactly to your own specifications.
+
+Don't spend your limited time reinventing the technology wheel. Instead, use an industry proven game development engine that can enhance your creativity, productivity and get your game done faster.
+
+<lmargin%:2><font:Arial Bold:18>Features<font:Arial:16>
+<lmargin%:5>The next several pages provide an overview of the major engine features.  Click the right arrow below to learn more about Scripting, the GUI System, Networking, Audio, Rendering, Interiors, Terrains, Water and much more....

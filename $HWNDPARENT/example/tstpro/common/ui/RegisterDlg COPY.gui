@@ -1,0 +1,151 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(RegisterDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "139 133";
+      extent = "274 200";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Register Torque2D";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiTextEditCtrl(REG_edit) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "28 119";
+         extent = "207 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "31 153";
+         extent = "85 30";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Register";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "RegisterDlg.doRegister();";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "151 153";
+         extent = "85 30";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         command = "Canvas.popDialog(RegisterDlg);";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function RegisterDlg::doRegister(%this)
+{
+   
+   %ret = iRegisterProduct( REG_edit.getValue() );
+   
+   if( %ret == 0 ) // Success
+   {
+      %this.regSucceed();
+      return;
+   }
+   else if( %ret == 1 ) // Wait
+   {
+      %status = iGetRegistrationStatus();
+      while( %status == 1 )
+      {
+         %status = iGetRegistrationStatus();
+      }
+      
+      switch( %status )
+      {
+         case 0:
+            // Woot
+            %this.regSucceed();
+            return;
+         case 2:
+            %errorString = "The key you have entered is invalid. Please make sure that your key appears exactly as it does in 'My Garage'.";
+         case 3:
+            %errorString = "This Ignition key has been disabled, please contact GarageGames for more information.";
+         case 4:
+            %errorString = "There was an error connecting to the Ignition server, please try again later. If this problem persists, please contact GarageGames.";
+         case 5:
+            %errorString = "The Ignition server has encountered an internal error, please try again later. If this problem persists, please contact GarageGames.";
+      }
+      
+      if( %errorString !$= "" )
+      {
+         if( $UseSysMessageBox )
+            sysMessageBoxOK( "Torque ShowTool Pro", %errorString );
+         else
+            MessageBoxOK( "Torque ShowTool Pro", %errorString );
+      }
+      else
+      {
+         Canvas.popDialog( %this );
+      }
+   }
+   else
+   {
+      switch( %ret )
+      {
+         case 2:
+            %errorString = "The key you have entered is invalid. Please make sure that your key appears exactly as it does in 'My Garage'.";
+         case 3:
+            %errorString = "This Ignition key has been disabled, please contact GarageGames for more information.";
+         case 4:
+            %errorString = "There was an error connecting to the Ignition server, please try again later. If this problem persists, please contact GarageGames.";
+         case 5:
+            %errorString = "The Ignition server has encountered an internal error, please try again later. If this problem persists, please contact GarageGames.";
+         
+         case -1:
+            %errorString = "An unknown error has occured.";
+      }
+      
+      if( $UseSysMessageBox )
+         sysMessageBoxOK( "Torque ShowTool Pro", %errorString );
+      else
+         MessageBoxOK( "Torque ShowTool Pro", %errorString );
+   }
+}
+
+function RegisterDlg::regSucceed(%this)
+{
+   if( $UseSysMessageBox )
+      sysMessageBoxOK( "Torque ShowTool Pro", "Thank you for registering Torque ShowTool Pro " @ iGetUserName() );
+   else
+      MessageBoxOK( "Torque ShowTool Pro", "Thank you for registering Torque ShowTool Pro " @ iGetUserName() );
+      
+   Canvas.popDialog( %this );
+}

@@ -1,0 +1,535 @@
+//-------------------------- 11/23/2005 -- 00:53:06 -----
+Processor Init:
+   Intel (unknown, Pentium Pro/II/III family), ~1.60 Ghz
+     (timed at roughly 1.60 Ghz)
+   FPU detected
+   MMX detected
+   SSE detected
+ 
+Math Init:
+   Installing Standard C extensions
+   Installing Assembly extensions
+   Installing FPU extensions
+   Installing MMX extensions
+   Installing SSE extensions
+ 
+Input Init:
+   keyboard0 input device created.
+   mouse0 input device created.
+   DirectInput enabled.
+
+Initializing chunk mappings...
+   o 'TEXT' maps to TextChunk
+   o 'SCHK' maps to UnknownChunk
+   o 'SCHK' maps to SimChunk
+--------- Loading MODS ---------
+Loading compiled script demo/main.cs.
+Loading compiled script common/main.cs.
+Missing file: common/defaults.cs!
+Loading compiled script demo/client/defaults.cs.
+Loading compiled script demo/server/defaults.cs.
+exec: Warning! Found a DSO from the future! (demo/client/prefs.cs.dso)
+Compiling demo/client/prefs.cs...
+Loading compiled script demo/client/prefs.cs.
+exec: Warning! Found a DSO from the future! (demo/server/prefs.cs.dso)
+Compiling demo/server/prefs.cs...
+Loading compiled script demo/server/prefs.cs.
+Loading compiled script creator/main.cs.
+Loading compiled script common/main.cs.
+Missing file: common/defaults.cs!
+
+--------- Parsing Arguments ---------
+
+--------- Initializing MOD: Common ---------
+Loading compiled script common/client/canvas.cs.
+Loading compiled script common/client/audio.cs.
+
+--------- Initializing MOD: Torque Demo ---------
+Loading compiled script demo/client/init.cs.
+Loading compiled script demo/server/init.cs.
+Loading compiled script demo/data/init.cs.
+Loading compiled script demo/data/terrains/highplains/propertyMap.cs.
+
+--------- Initializing MOD: Torque Demo Server ---------
+Loading compiled script common/server/audio.cs.
+Loading compiled script common/server/server.cs.
+Loading compiled script common/server/message.cs.
+Loading compiled script common/server/commands.cs.
+Loading compiled script common/server/missionInfo.cs.
+Loading compiled script common/server/missionLoad.cs.
+Loading compiled script common/server/missionDownload.cs.
+Loading compiled script common/server/clientConnection.cs.
+Loading compiled script common/server/kickban.cs.
+Loading compiled script common/server/game.cs.
+Loading compiled script demo/server/scripts/commands.cs.
+Loading compiled script demo/server/scripts/centerPrint.cs.
+Loading compiled script demo/server/scripts/game.cs.
+
+--------- Initializing MOD: Torque Demo Client ---------
+Loading compiled script demo/client/ui/customProfiles.cs.
+Loading compiled script common/client/message.cs.
+Loading compiled script common/client/mission.cs.
+Loading compiled script common/client/missionDownload.cs.
+Loading compiled script common/client/actionMap.cs.
+Video Init:
+   Accelerated OpenGL display device detected.
+   Accelerated D3D device detected.
+   Voodoo 2 display device not detected.
+
+Activating the OpenGL display device...
+Activating the OpenGL display device...
+Setting screen mode to 800x600x32 (w)...
+Creating a new window...
+Acquiring a new device context...
+Pixel format set:
+  32 color bits, 24 depth bits, 8 stencil bits
+Creating a new rendering context...
+Making the new rendering context current...
+OpenGL driver information:
+  Vendor: ATI Technologies Inc.
+  Renderer: MOBILITY RADEON 9600 x86/SSE2
+  Version: 2.0.5220 WinXP Release
+OpenGL Init: Enabled Extensions
+  ARB_multitexture (Max Texture Units: 8)
+  EXT_blend_color
+  EXT_blend_minmax
+  EXT_compiled_vertex_array
+  EXT_texture_env_combine
+  EXT_packed_pixels
+  EXT_fog_coord
+  ARB_texture_compression
+  EXT_texture_compression_s3tc
+  (ARB|EXT)_texture_env_add
+  EXT_texture_filter_anisotropic (Max anisotropy: 16)
+  WGL_EXT_swap_control
+OpenGL Init: Disabled Extensions
+  EXT_paletted_texture
+  NV_vertex_array_range
+  3DFX_texture_compression_FXT1
+
+Loading compiled script common/ui/defaultProfiles.cs.
+Loading compiled script common/ui/ConsoleDlg.gui.
+Loading compiled script common/ui/LoadFileDlg.gui.
+Could not locate texture: common/ui/bs
+Loading compiled script common/ui/ColorPickerDlg.gui.
+Loading compiled script common/ui/SaveFileDlg.gui.
+Could not locate texture: common/ui/bs
+Loading compiled script common/ui/MessageBoxOkDlg.gui.
+Loading compiled script common/ui/MessageBoxYesNoDlg.gui.
+Loading compiled script common/ui/MessageBoxOKCancelDlg.gui.
+Loading compiled script common/ui/MessagePopupDlg.gui.
+Loading compiled script common/ui/HelpDlg.gui.
+Loading compiled script common/ui/RecordingsDlg.gui.
+Loading compiled script common/ui/NetGraphGui.gui.
+Loading compiled script common/client/metrics.cs.
+Loading compiled script common/ui/FrameOverlayGui.gui.
+Loading compiled script common/client/messageBox.cs.
+Loading compiled script common/client/screenshot.cs.
+Loading compiled script common/client/cursor.cs.
+Loading compiled script common/client/help.cs.
+Loading compiled script common/client/recordings.cs.
+
+OpenAL Driver Init:
+OpenAL
+ Missing OpenAL Extension function 'EAXSet'
+ Missing OpenAL Extension function 'EAXGet'
+   Vendor: Creative Labs Inc.
+   Version: 1.1
+   Renderer: Software
+   Extensions: EAX EAX2.0 EAX3.0 EAX4.0 EAX5.0 EAX3.0EMULATED EAX4.0EMULATED AL_EXT_OFFSET AL_EXT_LINEAR_DISTANCE AL_EXT_EXPONENT_DISTANCE
+
+Loading compiled script demo/client/scripts/audioProfiles.cs.
+Loading compiled script demo/client/ui/defaultGameProfiles.cs.
+Loading compiled script demo/client/ui/PlayGui.gui.
+Loading compiled script demo/client/ui/FpsGui.gui.
+Loading compiled script demo/client/ui/RacingGui.gui.
+Loading compiled script demo/client/ui/SceneGui.gui.
+Missing file: demo/client/ui/PageGui.gui!
+Loading compiled script demo/client/ui/ChatHud.gui.
+Loading compiled script demo/client/ui/playerList.gui.
+Loading compiled script demo/client/ui/overlayDlg.gui.
+Loading compiled script demo/client/ui/mainMenuGui.gui.
+demo/client/ui/mainMenuGui.gui (0): Unable to find object: 'inspect' attempting to call function 'inspect'
+Loading compiled script demo/client/ui/aboutDlg.gui.
+Loading compiled script demo/client/ui/startMissionGui.gui.
+Loading compiled script demo/client/ui/joinServerGui.gui.
+Loading compiled script demo/client/ui/loadingGui.gui.
+Loading compiled script demo/client/ui/endGameGui.gui.
+Loading compiled script demo/client/ui/optionsDlg.gui.
+Loading compiled script demo/client/ui/remapDlg.gui.
+Loading compiled script demo/client/ui/StartupGui.gui.
+Loading compiled script demo/client/ui/ProductGui.gui.
+Loading compiled script demo/client/ui/MainMenuDlg.gui.
+Loading compiled script demo/client/ui/overview_main.gui.
+Loading compiled script demo/client/ui/features/features_main.gui.
+Loading compiled script demo/client/ui/features/features_script.gui.
+Loading compiled script demo/client/ui/features/features_gui.gui.
+Loading compiled script demo/client/ui/features/features_net.gui.
+Loading compiled script demo/client/ui/features/features_render.gui.
+Loading compiled script demo/client/ui/features/features_terrain.gui.
+Loading compiled script demo/client/ui/features/features_interior.gui.
+Loading compiled script demo/client/ui/features/features_mesh.gui.
+Loading compiled script demo/client/ui/features/features_water.gui.
+Loading compiled script demo/client/ui/features/features_sound.gui.
+Loading compiled script demo/client/ui/platform/platform_T2D.gui.
+Loading compiled script demo/client/ui/platform/platform_TSE.gui.
+Loading compiled script demo/client/ui/platform/platform_console.gui.
+Loading compiled script demo/client/ui/platform/platform_TNL.gui.
+Loading compiled script demo/client/ui/tools/tools_main.gui.
+Loading compiled script demo/client/ui/tools/tools_gui.gui.
+Loading compiled script demo/client/ui/tools/tools_world.gui.
+Loading compiled script demo/client/ui/tools/tools_terrain.gui.
+Loading compiled script demo/client/ui/tools/tools_texture.gui.
+Loading compiled script demo/client/ui/tools/tools_heightfield.gui.
+Loading compiled script demo/client/ui/tools/tools_showtool_pro.gui.
+Loading compiled script demo/client/ui/tools/tools_rts_kit.gui.
+Loading compiled script demo/client/ui/tools/tools_lighting_kit.gui.
+Loading compiled script demo/client/ui/tools/tools_content_packs.gui.
+Loading compiled script demo/client/ui/tools/tools_books_docs.gui.
+Loading compiled script demo/client/ui/products/product_main.gui.
+Loading compiled script demo/client/ui/products/product_tribes2.gui.
+Loading compiled script demo/client/ui/products/product_hunting.gui.
+Loading compiled script demo/client/ui/products/product_marbleblast.gui.
+Loading compiled script demo/client/ui/products/product_thinktanks.gui.
+Loading compiled script demo/client/ui/products/product_tenniscritters.gui.
+Loading compiled script demo/client/ui/products/product_orbz.gui.
+Loading compiled script demo/client/ui/products/product_marbleblastultra.gui.
+Loading compiled script demo/client/ui/testimonials/community.gui.
+Loading compiled script demo/client/ui/testimonials/testimonials_main.gui.
+Loading compiled script demo/client/ui/license/publishing.gui.
+Loading compiled script demo/client/ui/license/license_main.gui.
+Loading compiled script demo/client/ui/license/license_indie.gui.
+Loading compiled script demo/client/ui/license/license_corp.gui.
+Missing file: demo/client/ui/license/license_other.gui!
+Loading compiled script demo/client/ui/garagegames/garagegames_main.gui.
+Loading compiled script demo/client/ui/theora/theora_main.gui.
+Loading compiled script demo/client/ui/AnimationSceneGui.gui.
+Loading compiled script demo/client/ui/DetailSceneGui.gui.
+Loading compiled script demo/client/ui/MountingSceneGui.gui.
+Loading compiled script demo/client/ui/DemoEditorAlert.gui.
+Loading compiled script demo/client/scripts/client.cs.
+Loading compiled script demo/client/scripts/game.cs.
+Loading compiled script demo/client/scripts/missionDownload.cs.
+Loading compiled script demo/client/scripts/serverConnection.cs.
+Loading compiled script demo/client/scripts/playerList.cs.
+Loading compiled script demo/client/scripts/loadingGui.cs.
+Loading compiled script demo/client/scripts/optionsDlg.cs.
+Loading compiled script demo/client/scripts/chatHud.cs.
+Loading compiled script demo/client/scripts/messageHud.cs.
+Loading compiled script demo/client/scripts/mainMenuGui.cs.
+Loading compiled script demo/client/scripts/playGui.cs.
+Loading compiled script demo/client/scripts/fpsGui.cs.
+Loading compiled script demo/client/scripts/racingGui.cs.
+Loading compiled script demo/client/scripts/sceneGui.cs.
+Loading compiled script demo/client/scripts/joinServerGui.cs.
+Loading compiled script demo/client/scripts/startMissionGui.cs.
+Loading compiled script demo/client/scripts/centerPrint.cs.
+Loading compiled script demo/client/scripts/DemoEditorAlert.cs.
+Loading compiled script demo/client/menu_threads.cs.
+Loading compiled script demo/client/scripts/default.bind.cs.
+exec: Warning! Found a DSO from the future! (demo/client/config.cs.dso)
+Compiling demo/client/config.cs...
+Loading compiled script demo/client/config.cs.
+Binding server port to default IP
+UDP initialized on port 0
+
+--------- Initializing: Torque Creator ---------
+Loading compiled script creator/editor/editor.cs.
+Loading compiled script creator/editor/particleEditor.cs.
+Loading compiled script creator/scripts/scriptDoc.cs.
+Loading compiled script creator/ui/creatorProfiles.cs.
+Loading compiled script creator/ui/InspectDlg.gui.
+Loading compiled script creator/ui/GuiEditorGui.gui.
+Engine initialized...
+PushThread: main_menu_thread
+Update: main_menu_thread page: 0
+isNext: 0 - 1
+Could not locate texture: demo/client/ui/button_d
+Could not locate texture: demo/client/ui/button_i
+Could not locate texture: demo/client/ui/button_d
+Could not locate texture: demo/client/ui/button_i
+Could not locate texture: demo/client/ui/button_d
+Could not locate texture: demo/client/ui/button_i
+Could not locate texture: demo/client/ui/button_d
+Could not locate texture: demo/client/ui/button_i
+Could not locate texture: demo/client/ui/arrows/exit_d
+Could not locate texture: demo/client/ui/arrows/exit_i
+Could not locate texture: demo/client/ui/arrows/arrow_left_d
+Could not locate texture: demo/client/ui/arrows/arrow_left_i
+Could not locate texture: demo/client/ui/arrows/arrow_right_d
+Could not locate texture: demo/client/ui/arrows/arrow_right_i
+Could not locate texture: demo/client/ui/buttons/home_d
+Could not locate texture: demo/client/ui/buttons/home_i
+Could not locate texture: demo/client/ui/buttons/website_d
+Could not locate texture: demo/client/ui/buttons/website_i
+Could not locate texture: demo/client/ui/buttons/purchase_d
+Could not locate texture: demo/client/ui/buttons/purchase_i
+Could not locate texture: demo/client/ui/buttons/options_d
+Could not locate texture: demo/client/ui/buttons/options_i
+Could not locate texture: demo/client/ui/buttons/credits_d
+Could not locate texture: demo/client/ui/buttons/credits_i
+Could not locate texture: demo/client/ui/buttons/exit_d
+Could not locate texture: demo/client/ui/buttons/exit_i
+Could not locate texture: demo/client/ui/buttons/buy_now_d
+Could not locate texture: demo/client/ui/buttons/buy_now_i
+Could not locate texture: demo/client/ui/arrows/exit_d
+Could not locate texture: demo/client/ui/arrows/exit_i
+Could not locate texture: demo/client/ui/arrows/arrow_left_d
+Could not locate texture: demo/client/ui/arrows/arrow_left_i
+Could not locate texture: demo/client/ui/arrows/arrow_right_d
+Could not locate texture: demo/client/ui/arrows/arrow_right_i
+Could not locate texture: demo/client/ui/buttons/home_d
+Could not locate texture: demo/client/ui/buttons/home_i
+Could not locate texture: demo/client/ui/buttons/website_d
+Could not locate texture: demo/client/ui/buttons/website_i
+Could not locate texture: demo/client/ui/buttons/purchase_d
+Could not locate texture: demo/client/ui/buttons/purchase_i
+Could not locate texture: demo/client/ui/buttons/options_d
+Could not locate texture: demo/client/ui/buttons/options_i
+Could not locate texture: demo/client/ui/buttons/credits_d
+Could not locate texture: demo/client/ui/buttons/credits_i
+Could not locate texture: demo/client/ui/buttons/exit_d
+Could not locate texture: demo/client/ui/buttons/exit_i
+Could not locate texture: demo/client/ui/buttons/buy_now_d
+Could not locate texture: demo/client/ui/buttons/buy_now_i
+Exporting server prefs...
+Loading compiled script demo/server/scripts/audioProfiles.cs.
+Loading compiled script demo/server/scripts/camera.cs.
+Loading compiled script demo/server/scripts/markers.cs.
+Loading compiled script demo/server/scripts/triggers.cs.
+Loading compiled script demo/server/scripts/inventory.cs.
+Loading compiled script demo/server/scripts/shapeBase.cs.
+Loading compiled script demo/server/scripts/staticShape.cs.
+Loading compiled script demo/server/scripts/radiusDamage.cs.
+Loading compiled script demo/server/scripts/chimneyfire.cs.
+Loading compiled script demo/server/scripts/item.cs.
+Loading compiled script demo/server/scripts/weapon.cs.
+Loading compiled script demo/server/scripts/flag.cs.
+Loading compiled script demo/server/scripts/scene.cs.
+demo/server/scripts/scene.cs (0): preload failed for LogoText: ShapeBaseData: Couldn't load shape "demo/data/shapes/logo/torque_logo_text.dts".
+Loading compiled script demo/server/scripts/fxlights.cs.
+Loading compiled script demo/server/scripts/environment.cs.
+Loading compiled script demo/server/scripts/fps.cs.
+Loading compiled script demo/server/scripts/player.cs.
+Loading compiled script demo/data/shapes/player/player.cs.
+Validation required for shape: demo/data/shapes/player/player.dts
+Loading compiled script demo/server/scripts/aiPlayer.cs.
+Validation required for shape: demo/data/shapes/player/player.dts
+Loading compiled script demo/server/scripts/crossbow.cs.
+ParticleEmitterData(CrossbowBoltEmitter) velocityVariance > ejectionVelocity
+Error: shape demo/data/shapes/crossbow/ammo.dts-collision detail 0 (Collision-3) bounds box invalid!
+Loading compiled script demo/server/scripts/racing.cs.
+Loading compiled script demo/server/scripts/car.cs.
+*** LOADING MISSION: demo/data/missions/features.mis
+*** Stage 1 load
+*** Stage 2 load
+Executing demo/data/missions/features.mis.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+onNeedRelight: Unknown command.
+*** Mission loaded
+Mission Type: DemoScene
+Connect request from: IPX:38000000:420000002302:0
+Connection established 1797
+CADD: 1798 local
+*** Sending mission load to client: demo/data/missions/features.mis
+Mapping string: ServerMessage to index: 0
+Mapping string: MsgConnectionError to index: 1
+Mapping string: MsgLoadInfo to index: 2
+Mapping string: MsgLoadDescripition to index: 3
+Mapping string: MsgLoadInfoDone to index: 4
+Mapping string: MsgClientJoin to index: 5
+Mapping string: Welcome to the Torque demo app %1. to index: 6
+Mapping string: Poser to index: 7
+Mapping string: MissionStartPhase1 to index: 8
+*** New Mission: demo/data/missions/features.mis
+*** Phase 1: Download Datablocks & Targets
+Mapping string: MissionStartPhase1Ack to index: 0
+Could not locate texture: demo/data/shapes/player/base.lmale
+Could not locate texture: demo/data/shapes/player/base.lmale
+Validation required for shape: demo/data/shapes/player/player.dts
+Could not locate texture: demo/data/shapes/player/base.lmale
+Could not locate texture: demo/data/shapes/player/base.lmale
+Validation required for shape: demo/data/shapes/player/player.dts
+Error: shape demo/data/shapes/crossbow/ammo.dts-collision detail 1 (Collision-3) bounds box invalid!
+Mapping string: MissionStartPhase2 to index: 9
+*** Phase 2: Download Ghost Objects
+Mapping string: MissionStartPhase2Ack to index: 1
+Could not locate texture: common/editor/fxlighticon.png
+Could not locate texture: common/editor/fxlighticon.png
+Could not locate texture: common/editor/fxlighticon.png
+Could not locate texture: common/editor/fxlighticon.png
+Ghost Always objects received.
+Mapping string: MissionStartPhase3 to index: 10
+Client Replication Startup has Happened!
+fxFoliageReplicator - Lev: 2  PotNodes: 21  Used: 19  Objs: 2655  Time: 0.0090s.
+fxFoliageReplicator - Approx. 0.30Mb allocated.
+fxFoliageReplicator - Client Foliage Replication Startup is complete.
+*** Phase 3: Mission Lighting
+Lighting mission....
+    = terrain lit in 0.300 seconds
+    = interior lit in 0.381 seconds
+    = interior lit in 0.080 seconds
+    = interior lit in 0.170 seconds
+    = interior lit in 0.181 seconds
+    = interior lit in 0.240 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.010 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.000 seconds
+    = interior lit in 0.100 seconds
+    = interior lit in 0.000 seconds
+ Scene lit in 1.682 seconds
+ Successfully saved mission lighting file: 'demo/data/missions/features_9fa9b47e.ml'
+Removing old lighting file 'demo/data/missions/features_6180f5f3.ml'.
+Mission lighting done
+Mapping string: MissionStartPhase3Ack to index: 2
+Activating Scene #0
+Scene WelcomeScene open
+Static Camera
+Mapping string: MissionStart to index: 11
+Mapping string: SyncClock to index: 12
+Mapping string: SetGameGUI to index: 13
+*** Initial Control Object
+Activating DirectInput...
+keyboard0 input device acquired.
+Could not locate texture: demo/client/ui/arrows/exit_d
+Could not locate texture: demo/client/ui/arrows/exit_i
+Could not locate texture: demo/client/ui/arrows/arrow_left_d
+Could not locate texture: demo/client/ui/arrows/arrow_left_i
+Could not locate texture: demo/client/ui/arrows/arrow_right_d
+Could not locate texture: demo/client/ui/arrows/arrow_right_i
+Could not locate texture: demo/client/ui/buttons/home_d
+Could not locate texture: demo/client/ui/buttons/home_i
+Could not locate texture: demo/client/ui/buttons/website_d
+Could not locate texture: demo/client/ui/buttons/website_i
+Could not locate texture: demo/client/ui/buttons/purchase_d
+Could not locate texture: demo/client/ui/buttons/purchase_i
+Could not locate texture: demo/client/ui/buttons/options_d
+Could not locate texture: demo/client/ui/buttons/options_i
+Could not locate texture: demo/client/ui/buttons/credits_d
+Could not locate texture: demo/client/ui/buttons/credits_i
+Could not locate texture: demo/client/ui/buttons/exit_d
+Could not locate texture: demo/client/ui/buttons/exit_i
+Could not locate texture: demo/client/ui/buttons/buy_now_d
+Could not locate texture: demo/client/ui/buttons/buy_now_i
+Mapping string: NPC to index: 14
+Scene WelcomeScene closed
+Activating Scene #1
+Scene TerrainEngineScene open
+Scene TerrainEngineScene closed
+Activating Scene #2
+Scene SkyScene open
+Static Camera
+Scene SkyScene closed
+Activating Scene #3
+Scene SunLightScene open
+Scene SunLightScene closed
+Activating Scene #4
+Scene BakedShadowsScene open
+Scene BakedShadowsScene closed
+Activating Scene #5
+Scene InteriorSpaces open
+Mapping string: Tarkof to index: 15
+Scene InteriorSpaces closed
+Activating Scene #6
+Scene OrcAnimationScene open
+Static Camera
+Scene OrcAnimationScene closed
+Activating Scene #7
+Scene OrcDanceScene open
+Scene OrcDanceScene closed
+Activating Scene #8
+Scene OrcShadowScene open
+Static Camera
+Mapping string: Dance to index: 16
+Scene OrcShadowScene closed
+Activating Scene #9
+Scene OrcDetailScene open
+Static Camera
+Scene OrcDetailScene closed
+Activating Scene #10
+Scene OrcMountingScene open
+Static Camera
+Mapping string: Detail to index: 17
+Scene OrcMountingScene closed
+Activating Scene #11
+Scene ProjectileScene open
+Static Camera
+Scene ProjectileScene closed
+Activating Scene #12
+Scene ExplosionScene open
+Scene ExplosionScene closed
+Activating Scene #13
+Scene FXLightScene open
+Static Camera
+Scene FXLightScene closed
+Activating Scene #14
+Scene MirrorScene open
+Exporting client prefs
+Exporting client config
+Exporting server prefs
+Exporting client prefs
+Exporting server prefs
+CDROP: 1798 IPX:38000000:420000002302:0
+Shutting down the OpenGL display device...
+Making the GL rendering context not current...
+Deleting the GL rendering context...
+Releasing the device context...
+Destroying the window...
+keyboard0 input device unacquired.
+DirectInput deactivated.

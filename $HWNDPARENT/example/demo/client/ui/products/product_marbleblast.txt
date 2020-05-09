@@ -1,0 +1,9 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/products/marbleblast_box><just:left>
+<font:Arial Bold:24>MarbleBlast Gold
+<font:Arial Bold:16>Developer:<font:Arial:16> GarageGames
+<font:Arial Bold:16>Publisher:<font:Arial:16> GarageGames
+<font:Arial Bold:16>Availability:<font:Arial:16> GarageGames.com, Gaming Portals, Xbox Live Arcade, and retail outlets.
+
+MarbleBlast Gold is the first game developed internally by GarageGames and uses the <font:Arial Bold:16>Torque Game Engine<font:Arial:16>.  MarbleBlast Gold is a marble based action/arcade game with dozens of challenging levels with moving platforms, hazards and power ups.  GarageGames created MarbleBlast Gold in just under 6 months with only minor modifications to the <font:Arial Bold:16>Torque Game Engine<font:Arial:16>.  The most notable changes were the addition of smooth shading to interior objects and custom marble physics. MarbleBlast Gold was originally released on Windows, Mac OS X, and Linux computer platforms.  Since then MarbleBlast Gold has been bundled with every Apple computer sold and brought to the original Xbox Live Arcade.  It is also a launch title for the new Microsoft Xbox 360 Live Arcade with exciting new multiplayer marble mayhem.  
+
+<just:center><bitmap:demo/client/ui/products/marbleblast_ss>

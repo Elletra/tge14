@@ -1,0 +1,157 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(LoadFileDialog) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 8";
+   visible = "1";
+      helpTag = "0";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "127 78";
+      extent = "640 370";
+      minExtent = "200 200";
+      visible = "1";
+      text = "Load File...";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(LoadFileDialog);";
+         helpTag = "0";
+
+      new GuiScrollCtrl() {
+         profile = "GuiScrollProfile";
+         horizSizing = "width";
+         vertSizing = "height";
+         position = "10 70";
+         extent = "550 290";
+         minExtent = "8 8";
+         visible = "1";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+            defaultLineHeight = "15";
+            helpTag = "0";
+
+         new GuiTextListCtrl(LFDFileList) {
+            profile = "GuiTextArrayProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "2 2";
+            extent = "9 8";
+            minExtent = "8 8";
+            visible = "1";
+            altCommand = "eval($loadFileCommand); Canvas.popDialog(LoadFileDialog);";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "0";
+            clipColumnText = "0";
+            clipLeft = "0";
+               noDuplicates = "false";
+               helpTag = "0";
+         };
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "570 70";
+         extent = "60 20";
+         minExtent = "8 8";
+         visible = "1";
+         command = "eval($loadFileRefreshCommand);";
+         text = "Refresh";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+         tooltipprofile = "TooltipProfile";
+         tooltip = "Refresh the File List for the Selected Project Directory";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "570 310";
+         extent = "60 20";
+         minExtent = "8 8";
+         visible = "1";
+         command = "eval($loadFileCommand); Canvas.popDialog(LoadFileDialog);";
+         text = "Load";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+         tooltipprofile = "TooltipProfile";
+         tooltip = "Open the Selected File";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "left";
+         vertSizing = "top";
+         position = "570 340";
+         extent = "60 20";
+         minExtent = "8 8";
+         visible = "1";
+         command = "eval($loadFileCancelCommand); Canvas.popDialog(LoadFileDialog);";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+            helpTag = "0";
+         tooltipprofile = "TooltipProfile";
+         tooltip = "Close the 'Load File' Window without Opening a File";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 25";
+         extent = "83 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Project Directory:";
+         maxLength = "255";
+      };
+      new GuiPopUpMenuCtrl(LFDProjectDirectoryPopup) {
+         profile = "GuiPopUpMenuProfile";
+         horizSizing = "width";
+         vertSizing = "bottom";
+         position = "10 45";
+         extent = "550 20";
+         minExtent = "8 2";
+         visible = "1";
+         text = "pathway";
+         maxLength = "255";
+         maxPopupHeight = "200";
+         sbUsesNAColor = "1";
+         reverseTextList = "0";
+         bitmapBounds = "16 16";
+         tooltipprofile = "TooltipProfile";
+         tooltip = "Select a Project Directory to View its Files";
+      };
+      new GuiBitmapCtrl(LFDBitmapView) {
+         profile = "GuiBorderProfile";
+         horizSizing = "left";
+         vertSizing = "bottom";
+         position = "567 165";
+         extent = "64 64";
+         minExtent = "8 2";
+         visible = "1";
+         wrap = "0";
+         tooltipprofile = "TooltipProfile";
+         tooltip = "Preview of Selected Bitmap";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

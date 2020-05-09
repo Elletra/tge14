@@ -1,0 +1,17 @@
+<lmargin%:2><just:right>
+<just:left><font:Arial Bold:24>Torque Showtool Pro<font:Arial:16><just:right><bitmap:demo/client/ui/tools/tstprolead><just:left>
+
+<lmargin%:5>TST Pro is a 3D visualization tool for the Torque Game Engine. It helps artists and programmers inspect their game art for aesthetic and technical accuracy by simulating the in-game environment, and providing easy access to behind-the-scenes structures.
+
+The Torque ShowTool Pro is a must-have development tool for every single team and individual working with the Torque Game Engine. Programmers and artists can:
+
+<lmargin%:10>• View a shapes material details and mesh with the click of a button
+• Inspect Nodes and joint structures using easy to understand visualization tools
+• Quickly verify a shapes lighting and shading characteristics using a wide variety of rendering modes
+• Analyze a shapes performance set-up by visualizing triangle faces and strips quickly and efficiently
+• Examine a shapes collision meshes in detail
+• Dynamically adjust and review levels-of-Detail and mip-mapping
+• Combine and review animations
+• And much more!
+
+<a:www.garagegames.com/products/59>More information about Torque ShowTool Pro</a>

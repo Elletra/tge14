@@ -1,0 +1,20 @@
+<lmargin%:2><just:center><bitmap:demo/client/ui/platform/torqueplatform><just:left>
+
+
+
+
+<font:Arial Bold:24>Torque 2D Game Builder
+<font:Arial:16><lmargin%:5><just:right><bitmap:demo/client/ui/platform/checkers><just:left>
+Torque 2D (T2D) is the world's most powerful 2D game engine. Built upon GarageGames' Torque Game Engine (TGE), T2D takes advantage of hardware-accelerated rendering and uses optimized 2D algorithms to provide the most robust 2D game development solution available today. T2D provides a complete cross platform 2D game development solution with static and animated sprites, infinitely customizable tiles, built in rigid-body physics, an incredible particle effects system, TorqueScript (our C++ like scripting language), a fast continuous-time collision detection system and more.  
+
+<font:Arial Bold:16>Why Use The Torque 2D Game Builder?<font:Arial:16>
+
+Here are just a few reasons...
+
+<font:Arial Italic:16>Educational: <font:Arial:16>One of the best ways to learn programming is to read code written by other developers. And if you are going to read code you might was well have fun and read game code, learning a few gamedev tricks in the process. Learning is especially fast and easy using TorqueScript, since it allows you to modify code and immediately see the results in-game. You will be able to see exactly what modifications of the script do to the game.
+
+<font:Arial Italic:16>Resume Building: <font:Arial:16>MOD and/or modify the engine to show off your skills to future employers.
+
+<font:Arial Bold:16>To Make Great Games! <font:Arial:16>That’s what we all live for... so do it! This is an unprecedented opportunity to build your game using an industry proven game engine that rocks! Check out how others using the Torque 2D Game Builder feel about its quality in our Testimonials section.
+
+<a:www.garagegames.com/products/62>Learn more about the Torque 2D Game Engine</a>

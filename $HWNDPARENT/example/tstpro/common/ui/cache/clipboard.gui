@@ -1,0 +1,15 @@
+new SimSet(guiClipboard) {
+
+   new GuiTextCtrl() {
+      profile = "GuiTextProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "126 180";
+      extent = "148 18";
+      minExtent = "8 2";
+      visible = "1";
+      command = "gotoWebPage(\"www.garagegames.com\");";
+      text = "Synapse Gaming Lighting Pack";
+      maxLength = "255";
+   };
+};

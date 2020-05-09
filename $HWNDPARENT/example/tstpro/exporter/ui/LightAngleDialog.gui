@@ -1,0 +1,129 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(LightAngleDialog) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(LADWindow) {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "307 237";
+      extent = "185 125";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Change Light Angle";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+
+      new GuiButtonCtrl(LADOK) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 85";
+         extent = "55 25";
+         minExtent = "8 2";
+         visible = "1";
+		 command = "dplSetLightAngleDialogOK();";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(LADCancel) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "115 85";
+         extent = "55 25";
+         minExtent = "8 2";
+         visible = "1";
+		 command = "Canvas.popDialog( LightAngleDialog );";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiControl() {
+         profile = "GuiAxisXRedProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "15 40";
+         extent = "22 18";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "22 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "  X : ";
+            maxLength = "255";
+         };
+      };
+      new GuiControl() {
+         profile = "GuiAxisZBlueProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "96 40";
+         extent = "22 18";
+         minExtent = "8 2";
+         visible = "1";
+
+         new GuiTextCtrl() {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "0 0";
+            extent = "22 18";
+            minExtent = "8 2";
+            visible = "1";
+            text = "  Z : ";
+            maxLength = "255";
+         };
+      };
+      new GuiTextEditCtrl(DPLightAngleZEdit) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "120 40";
+         extent = "50 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "0.000";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiTextEditCtrl(DPLightAngleXEdit) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "39 40";
+         extent = "50 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "0.000";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

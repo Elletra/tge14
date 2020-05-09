@@ -1,0 +1,10 @@
+<lmargin%:2><just:right>
+<just:left><font:Arial Bold:24>RTS Starter Kit<font:Arial:16><just:right><bitmap:demo/client/ui/tools/RTSKit><just:left>
+
+<lmargin%:5>The Torque RTS Starter Kit provides foundational technology and modifications to the Torque Game Engine to make it easier for Indies to quickly produce their own strategy games. The RTS Starter Kit will give you and your team the leg-up you need to quickly prototype your game, and start adding the features you need to make your game shine.
+
+This kit is invaluable for anyone aspiring to make a Real Time Strategy game using Torque. This starter kit, however, is not limited in its usefulness to an RTS game. A top-down RPG, similar to Dungeon Siege or Baldurs Gate, could greatly benefit from the selection and camera features, as well as the built-in, efficient multi-player support. Maybe you have an idea for a puzzle game that includes running little things around, this starter kit will give you the foundation to make your game work.
+
+<a:www.garagegames.com/products/54>More information about the RTS Starter Kit</a>
+
+<just:center><bitmap:demo/client/ui/tools/rtsscreen>

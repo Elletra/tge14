@@ -1,0 +1,11 @@
+﻿<color:000000><font:Arial Bold:24>Torque Commercial License
+<lmargin%:5><rmargin%:95><font:Arial:16>The Torque Commercial Licence is for individuals, companies and government entities looking to develop any type of product and for individuals who no longer qualify for the Indie License.  The Torque Game Engine is well suited for architecture, game, medical and military simulations as well as a variety of other creative applications.
+
+<font:Arial Bold:16>Commercial License Summary:
+<lmargin%:8><rmargin%:95><font:Arial:16>• Only $495 per seat, includes complete source code to the engine and all built-in tools.
+• No royalties.
+• No publisher restrictions.
+• No limit to the number of products you can publish per license.
+• Can be used for non-game applications.
+
+For more information about the Torque Game Engine and to review the complete End User License Agreement (EULA) please visit our <a:www.garagegames.com/products/31>website product page</a> or <a:www.garagegames.com/company/contact/>contact us</a> directly.

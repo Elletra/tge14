@@ -1,0 +1,4 @@
+<color:000000><font:Arial Bold:24>Torque Game Engine Licenses in a Nutshell
+<lmargin%:5><rmargin%:95><font:Arial:16>The Torque Game Engine is used for much more than just games: it is being used for visualization, military simulations, educational materials and the list goes on.  Our goal is to keep our license agreements as simple and straight forward as possible.  Please contact us if you have any questions about licensing Torque for your project.  Continue on to learn about our different licensing options.
+
+<just:center><bitmap:demo/client/ui/license/commercial>

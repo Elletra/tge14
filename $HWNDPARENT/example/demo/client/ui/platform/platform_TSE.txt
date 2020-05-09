@@ -1,0 +1,22 @@
+﻿<lmargin%:2><just:center><bitmap:demo/client/ui/platform/torqueplatform><just:left>
+
+
+
+
+<font:Arial Bold:24>Torque Shader Engine
+<font:Arial:16><lmargin%:5><just:right><bitmap:demo/client/ui/platform/icecave><just:left>
+The Torque Shader Engine (TSE) is built on the robust AAA Torque Game Engine technology, taking advantage of modern shader hardware with vastly improved interior, shape, and environment rendering systems, a completely re-written and optimized terrain system and much more. TSE takes advantage of shader technology and is not simply a quickly "band-aided" shader implementation with some tricky water effect or a simple glow filter to add one more product bullet point. This is a ground-up rewrite of Torque’s rendering engine to take advantage of modern graphics cards and the latest changes to Direct X and OpenGL.
+
+<font:Arial Bold:16>Why Use The Torque Shader Engine?<font:Arial:16>
+
+Here are just a few reasons...
+
+<lmargin%:5>•  An API independent graphics layer, TorqueGFX, currently supporting DirectX 9, but designed with forthcoming OpenGL support in mind.
+•  Procedural generation of shaders that support normalmapping, detail maps, specular, cubemapping, glow, refraction, reflection, texture UV animation, and more.
+•  Powerful shader interface allowing easy integration of custom shaders and effects.
+•  Versatile vertex buffer and texture management, with support for static, dynamic and volatile vertex buffers.
+•  New lighting system.
+•  New water system, taking advantage of modern hardware to render water effects similar to those found in games like FarCry or Half-Life 2.
+•  New Atlas Terrain Engine, providing limitless terrain vistas, and completely customizable terrain and texture resolutions.
+
+<a:www.garagegames.com/products/28>Learn more about the Torque Shader Engine</a>

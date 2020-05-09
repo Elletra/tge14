@@ -1,0 +1,6 @@
+<lmargin%:2><just:right>
+<just:left><font:Arial Bold:24>Content Packs<font:Arial:16><just:right><bitmap:demo/client/ui/tools/contentpack><just:left>
+
+<lmargin%:5><font:Arial Bold:16>So what is a content pack? <font:Arial:16>A content pack is a collection of professional quality art assets that you can use in games being made with the Torque Game Engine. Not only do you get all the models, textures and environments prepared specifically for drag and drop into the Torque Game Engine, but you also get the source art so you can go into your favorite .map editor or 3D modeling program and customize any object in a pack. With both source art and pre-packaged, ready-made objects, content packs make great teaching and learning tools for game developers wanting to understand more about game art and the art pipeline.
+
+At <a:www.garagegames.com/mg/projects/tge/artist.php#Store>GarageGames.com</a>, you'll find many different content packs to help get your game idea off the ground and into the Torque Game Engine.

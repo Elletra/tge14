@@ -1,0 +1,9 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/missions/start_fps>
+<just:left><font:Arial Bold:18>Multiplayer Shooter Demo<font:Arial:16><lmargin%:5>
+The Torque Game Engine contains award winning network play.  You can either host your own game server and allow people to connect, or connect to a network game hosted by someone else.  You can host and play at the same time. The Torque Game Engine also supports dedicated non-client based servers.
+
+<font:Arial Bold:18><lmargin%:2>To Start the FPS Demo<font:Arial:16><lmargin%:5>
+• Enter your player name.
+• To host a network game, check the "Create Server" box.
+• To join a network game, don't select the "Create Server" box.
+• Press the right arrow button below to begin the FPS Demo. 

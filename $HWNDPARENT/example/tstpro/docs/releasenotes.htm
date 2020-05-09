@@ -1,0 +1,564 @@
+<html>
+<head>
+<title>David Wyand's Looking Glass</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+<p align="center"><b><font face="Arial, Helvetica, sans-serif">Release Notes</font></b></p>
+<p><b>November 4, 2005 (Version 1.02):</b></p>
+<p>- Added tool tips to all GUI controls. Hold the mouse pointer over any control 
+  for a couple of seconds for the tool tip to be displayed.</p>
+<p>- The Torque Game Engine v1.4 added support for more than 8 collision meshes. 
+  TST Pro has been updated to also remove this limitation.</p>
+<p>- The full PDF documentation is now available from the Help-&gt;Complete Documentation 
+  menu item.</p>
+<p>- Under OSX, the standard Quit menu item now shuts down the application.</p>
+<p>- OSX 10.3.9 is now the minimum version that is supported. The same application 
+  bundle now runs under OSX 10.3.9 and OSX 10.4.x.</p>
+<p>&nbsp;</p>
+<p><b>May 3, 2005 (Version 1.01 OSX Only):</b></p>
+<p>- Corrected a bug under OSX 10.4 (Tiger) that was preventing TST Pro from launching.</p>
+<p>- Under OSX, it is now possible to open shapes on volumes other than the one 
+  TST Pro is launched from.</p>
+<p>&nbsp;</p>
+<p><b>December 15, 2004 (Version 1.0):</b></p>
+<p>- Under the Mounting window, the left list that contains the nodes for the 
+  object to be mounted now has a new entry: [origin]. Selecting this entry rather 
+  than one of the node names in the list will mount the object from its world 
+  origin. This is to work around objects that don't have a proper mount point 
+  node (normally called mountPoint), such as the TGE Orc crossbow. </p>
+<p>&nbsp;</p>
+<p><b>December 1, 2004:</b></p>
+<p>- Fixed a bug where only the triggers in the first sequence that had them were 
+  correct and subsequent sequences with triggers always pointed back to the first 
+  sequence. Now all animation sequences correctly show their own triggers.</p>
+<p>- Added a check at object load time for shapes that may be corrupted due to 
+  an older 3DS Max exporter. These shapes would normally require UnmessDTS to 
+  be run on them to fix them. If the user has not yet run UnmessDTS, then the 
+  shape would crash Looking Glass. When loading one of these shapes, the user 
+  is presented with a messaage boxing asking if they would like to continue to 
+  load the shape even though it likely contains errors. This user request was 
+  added just in case Looking Glass has missinterpreted the DTS file (a false positive 
+  on the test) and it is indeed OK to load it. Whew!</p>
+<p>- The current mip map level may now be modified from the bottom of the Materials 
+  window. Either the value may be entered into the "Global Base Mip Map Level" 
+  text field (remeber to press Enter for the value to take) or the double-arrow 
+  drag button may be used.</p>
+<p>- The locking of the max mip map level may now be done from the bottom of the 
+  Materials window. Use the "Lock Mip Map Level" checkbox. This is the same as 
+  pressing the "m" keyboard shortbut or using the "M with Lock" button in the 
+  toolbar at the top of the main window.</p>
+<p>- A new option has been added to the Materials window. The "Draw Material Window 
+  bitmap at current mip map level" checkbox, when activated, will force the bitmap 
+  of the currently selected material (at the top of the Material window) to draw 
+  at the current mip map level. This is handy if you wish to see how OpenGL is 
+  scaling the various mip map levels.</p>
+<p>&nbsp;</p>
+<p><b>November 8, 2004:</b></p>
+<p>- Both the shape tree view and rendering simulation tree view on the Shape 
+  Properties window have a checkbox added to determine if primitives should be 
+  included in the list. With this option checked, all primitives and their number 
+  of vertices will be shown as children of their materials. By default this option 
+  is off as very large objects or slower machines may take a while to generate 
+  this list upon object load and switching between objects.</p>
+<p></p>
+<p>- Two new rendering modes have been added: Triangle Strips and Tri-strip Wireframe. 
+  Both of these rendering modes will disable all texturing and assign a random 
+  colour to each triangle strip in the object. The wireframe mode adds a coloured 
+  wireframe over the triangle strips for better individual triangle visibility. 
+  As always, the wireframe colour may be controlled using the Display Properties 
+  window.</p>
+<p>- The Mount Window now has a new checkbox underneath each of the node lists 
+  that allows the user to sort the list alphabetically. With sorting turned off, 
+  the node list will be in the order in which it was saved within the DTS file, 
+  just as it has worked in previous versions.</p>
+<p>- Created a new button for Light Properties. This opens a new window that contains 
+  all of the controls that were under the Light tab of the Display Properties 
+  window.</p>
+<p>- Removed the Light tab from the Display Properties window and replaced it 
+  with a Node tab. Any controls that were under the Render tab that had to do 
+  with nodes have been moved to this new tab.</p>
+<p>- When an environmental map is loaded using the Display Properties window's 
+  Render tab EMap popup, it is now displayed underneath the popup list. This helps 
+  to identify what the actual bitmap looks like.</p>
+<p>- A new slider control has been added to the Display Properties window's Render 
+  tab: Tristrip Bias. Using this slider forces the triangle strip display mode 
+  to cycle through the random colour table, changing the colour of each triangle 
+  strip. If you find that two triangle strips that are next to each other are 
+  too similar in colour, use this bias to help them stand out.</p>
+<p>- There is now a default environment map (clouds from TGE) that will be selected 
+  when the environment map toolbar button is clicked. To load up a different environment 
+  map, use the popup under the Display Properties window Render tab. The last 
+  selected bitmap will always be used with the environment map toolbar button 
+  within the same session.</p>
+<p>- The 'Show rotation/translation axis' checkbox has been moved to the Render 
+  tab of the Display Properties window.</p>
+<p>- A new checkbox has been added to the Display Properties window's General 
+  tab entitled 'Invert view's mouse rotation'. When this is checked the mouse 
+  controls will be inverted when rotating the main viewing window. This allows 
+  the user to match their own 3D application's method of rotating a view with 
+  the mouse.</p>
+<p>- When loading in a bitmap such as for an environmental map or a background, 
+  the load file dialog window now contains a small preview of the selected bitmap. 
+  It's useful to make sure you have the correct one selected before actually loading 
+  it.</p>
+<p>- Fixed a bug where the rotation of the mount point of a child object (the 
+  node of the object being mounted onto the current object, often named 'mountpoint') 
+  was not being taken into account.</p>
+<p>- Windows such as the Display Properties are no longer stopped from moving 
+  past the edge of the main window. This means that you could have a window that 
+  is partially moved off screen.</p>
+<p>- There is now a minimum size that the Looking Glass window may be shrunken 
+  to in order to keep some of the interface accessible. However, as the window 
+  is made smaller, some of the buttons and popup controls will disappear to prevent 
+  controls from being drawn over top of each other. When this occurs, the text 
+  'MORE' will appear with an arrow to indicate that there are more controls if 
+  the window were to be made larger. This applies to the toolbar buttons along 
+  the top, the object and node popups along the bottom, and the item coordinates 
+  display at the bottom left.</p>
+<p>- With a sorted mesh (TSSortedMesh) is being viewed it is now possible to see 
+  the rendering order of the clusters within the 3D view. To activate this mode, 
+  select the 'Show Sorted Mesh Draw Order' checkbox from the Rendering tab on 
+  the Display Properties window or use the button in the toolbar that looks like 
+  two intersecting planes. It may also be toggled from any preset. With this mode 
+  active, each cluster of primitives will be drawn in a shade of gray depending 
+  on its drawing order -- the first cluster drawn will be very dark and the last 
+  cluster drawn will be very light. It is usually best to use this mode with lighting 
+  disabled so that the shading due to lights doesn't conflict with the cluster 
+  colouring. And while this mode may be used with texturing turned on, it may 
+  be easiest to view in a display mode that does not include textures. A good 
+  object to try this on is any of the leafy trees that come with the TGE demo.</p>
+<p>- A new rendering mode has been added that will force a shape to render transparently. 
+  This is most useful when used in combination with the new solid bone mode mentioned 
+  below. To activate this mode, use the 'Render meshes in ghost mode' checkbox 
+  from the Rendering tab on the Display Properties window or use the button in 
+  the toolbar that looks like a ghost. It may also be toggled from any preset. 
+  When active, all shapes will be drawn with a transparency value set with the 
+  'Fade Amt' slider under the checkbox. Setting the slider to 0 will cause the 
+  shape to be completely transparent and a value of 1 will force the mesh to be 
+  opaque as if the ghost mode were turned off.</p>
+<p>- A new method of drawing the connections between nodes has been added: Solid 
+  Bones. As usual, this method may be selected using the 'Connect nodes as' popup 
+  from the Nodes tab of the Display Properties window. It may also be set from 
+  any preset. With this connection method active, all connections will be drawn 
+  with a filled-in bone shape and both the connections and the node axis' will 
+  take the depth buffer into account. This will cause the 'bones' to not be drawn 
+  if they are inside the shape. However, when used in combination with the ghost 
+  mode above, it is possible to see the bones within the shape and get a sense 
+  of their 3D position.</p>
+<p>- The camera's field of view may now be interactively modified using the button 
+  with the vertical and horizontal boxes that is located between the Target and 
+  Rotation buttons located at the upper right of the main screen. Holding down 
+  the left mouse button will display the current FOV underneath the row of buttons 
+  (in the HUD). Dragging the mouse left and right will modify the camera's FOV.</p>
+<p>- The fix for the child's mount point rotation not being taken into account 
+  introduced a new bug with wheeled vehicle wheels. The TGE wheeled vehicle code 
+  mounts its wheels differently than the shapebase mount code in that it doesn't 
+  take the child's mount point rotation into account. To correct for this, the 
+  Mount Left, Mount Right and Mount Wheels buttons on the Mount Objects window 
+  will not take the child's mount point rotation into account. However, the regular 
+  Mount button still does.</p>
+<p>- Added an 'Unmount All' button to the Mount Objects window.</p>
+<p>- New buttons have been added to customize the background, direct light and 
+  ambient light colours. Beside each text edit control for red, green and blue 
+  is a button with two arrows on its face. Holding down the left mouse button 
+  and dragging left and right will modify the neighboring colour value and automatically 
+  switch the accompanying popup to Custom.</p>
+<p>- A new set of popup controls have been added to the Mount Objects window. 
+  In place of the checkboxes that allowed for the sorting of the node lists are 
+  popup controls that provide three options: don't sort (same order as loaded 
+  from DTS file); sorted; and sorted but with all nodes that begin with 'mount' 
+  placed at the top of the list. The last option is quite useful when you're referencing 
+  nodes with the standard TGE naming convention.</p>
+<p>&nbsp;</p>
+<p><b>September 22, 2004:</b></p>
+<p>- Under Windows, a new button has been added to the Project Directory modify 
+  window. It is a picture of a right pointing arrow. This button will open a standard 
+  Windows dialog that allows the user to choose the project directory and populates 
+  the chosen pathway into the "Path to Project Directory" edit field.</p>
+<p></p>
+<p>- The Shape Properties window now contains two tabs along the top: Tree and 
+  TSDump. The TSDump tab provides access to the standard TGE TSDump facility that 
+  was provided in a previous release. The Tree tab provides a hierarchical view 
+  of the displayed DTS file including detail levels, subshape structure, and skins.</p>
+<p>- Added the ability to render objects using the Synapse Gaming Lighting Pack. 
+  This may be toggled on or off using the Synapse Gaming Lighting Pack check box 
+  under the Lights tab of the Display Properties window, or using the icon in 
+  the toolbar with a lightbulb and 'LP' text beside it. Note that when in this 
+  rendering mode, having the main light over 50% strength (or 128 in any of the 
+  text fields) will create an overexposed look.</p>
+<p>- Added a new tab on the Shape Properties window: Rendering. This tab contains 
+  a tree view that simulates the order that meshes are rendered in. This is useful 
+  to determine if your non-transparent meshes are indeed being rendered before 
+  your transparent ones. The information updates based on the currently viewed 
+  detail level.</p>
+<p>- The Tree and Rendering tab trees under the Shape Properties window may have 
+  their columns resized. To do so, click the mouse on the vertical column separator 
+  bar within the header and move the mouse left and right.</p>
+<p>- Shifted around some buttons. The Presets drop-down is now underneath the 
+  tool bar beside the Grid drop-down. The Shape Properties button has been moved 
+  down to just above the Sequence Info button.</p>
+<p>- New preset options have been added: Use Synapse Gaming Lighting Pack, set 
+  the background colour, and set the background bitmap.</p>
+<p>- Added in three new items to the LOD HUD: Alpha In, Alpha Out, and IntraDL. 
+  The first two define when the current detail level will fade in the next detail 
+  level and when the current detail level will fade out, respectively. The IntraDL 
+  value is the current shape instance intraDL and controls when the fading occurs. 
+  The standard TGE formulae are as follows:<br>
+  <br>
+  CurrentIntraDL > AlphaIn + AlphaOut: render current DL <br>
+  else<br>
+  CurrentIntraDL > AlphaOut: render next DL with alpha, then render current DL<br>
+  else<br>
+  Render current DL with alpha, then render next DL</p>
+<p>- A new 'S' button has been placed beside each of the sequence, object, and 
+  node popup lists on the main screen. When this button is depressed, the popup 
+  list will be sorted alphabetically. With the button raised, the list will be 
+  in the same order as defined within the DTs file (as it has always been).</p>
+<p>- Modified the Project Directory window to operate like the Presets window. 
+  Selecting an entry and editing either the optional name or pathway will change 
+  the selected entry rather than requiring the user to also add a new entry. A 
+  new button has been added: Copy Directory, which will copy the selected directory 
+  name and pathway to a new list entry. The other buttons operate the same as 
+  in previous releases.</p>
+<p>- The camera rotation, translation, and zoom are now stored with the individual 
+  object. With this change, the camera will no longer be reset when switching 
+  the view between multiple objects. The camera may still be manually reset using 
+  previous methods.</p>
+<p>- Added a new button to the tool bar labeled 'MP'. This allows the user to 
+  toggle the rendering of all mounted objects within the current view.</p>
+<p>- It is now possible to set an animation to ping pong forwards and backwards 
+  while playing. This may be activated regardless of the animation sequence's 
+  capability to loop. To turn this feature on, toggle the new button in the lower 
+  right of the main window that has a right and left arrow on its face. This is 
+  beside the original Play button.</p>
+<p>- Added in support for TGE shape instance material reskinning on a per object 
+  basis. The controls for this may be found at the bottom of the Material Properties 
+  window. With the checkbox selected, the current object will be forced to reskin 
+  using the name in the text edit box. With the checkbox unselected, the current 
+  object will revert to the materials it had when first loaded. Reskinning of 
+  an object may also be set up using the Presets drop-down menu. This allows for 
+  easy toggling between the red team's colours and the blue team's colours, for 
+  example.</p>
+<p>- When using the 'Load DTS & CS' option, the .cs file will now always be first 
+  compiled before it is loaded. This should ensure that any changes made to the 
+  file are recognized, even if it was previously loaded in the same Looking Glass 
+  session.</p>
+<p>- The load file dialog has been updated to include a Refresh button to reload 
+  the list of displayed files. This was required as the list of files is buffered 
+  within the internal resource manager. Also, a new Project Directory drop-down 
+  has been added to the top of the load file dialog to allow the user to browse 
+  through their project directories without needing to first close the dialog.</p>
+<p>- The Shape Properties Tree tab now has Expand All and Collapse All buttons 
+  to expand or collapse the displayed tree.</p>
+<p>&nbsp;</p>
+<p><b>August 30, 2004:</b></p>
+<p>- David Wyand's Looking Glass now runs on Mac OSX.</p>
+<p></p>
+<p>- A number of new buttons have been added to rotate, translate and zoom the 
+  display. These are located in the upper right of the window and allow you to 
+  perform these functions with only the left mouse button (or from a single button 
+  mouse in the case of the Mac).</p>
+<p>- Added a button that looks like a bullseye to the upper right of the window. 
+  This performs the same function as click on the 'a' key: recentre the display 
+  around the current object.</p>
+<p>- Added a new drop-down to change the current view. The options are: top, bottom, 
+  front, back, left, right and perspective. The perspective option is the standard. 
+  Keys 1 through 7 match up with the options in the drop-down (ie: pressing a 
+  '7' will change the display to perspective) and may be used to change the display.</p>
+<p>- Under OSX, a new button has been added to the Project Directory modify window. 
+  It is a picture of a right pointing arrow. This button will open a standard 
+  OSX window that allows the user to choose the project directory and populates 
+  the chosen pathway into the "Path to Project Directory" edit field.</p>
+<p>- It is now possible to translate and zoom with the left mouse button. Holding 
+  down the CTRL key with the left mouse button will cause the view to translate 
+  (the same as using the right mouse button) while holding down the ALT (Apple 
+  or Command key on the Mac) key will cause the view to zoom (the same as using 
+  the mouse wheel). All of the usual modifier keys will also work at the same 
+  time ie: hold down SHIFT in addition to CTRL to translate faster.</p>
+<p>- Implemented user defined presets. From the Presets drop down menu in the 
+  upper left, the user may choose the modify option which will open a new window. 
+  From here, presets may be built and assigned to a function key (F1-F8). The 
+  checkbox beside each parameter indicates if the selected preset will change 
+  that parameter or leave it alone. Clicking on the "G" button beside each parameter 
+  will get the currently set value (such as setup in the Display Properties window). 
+  There must always be one preset in the list, although it doesn't have to be 
+  the supplied default one. These presets are saved when the program is quit.</p>
+<p>- Added a grid size drop down menu to the tool bar area. It is now possible 
+  to change the grid size without having to go to the Display properties window.</p>
+<p>- From the HUD, the specifics of a tsLastDetail (billboard) detail level are 
+  shown, such as the number of equatorial and polar steps, etc. The currently 
+  rendered bitmap index and the angles at which it was rendered at are also shown. 
+  This may be toggled on or off from the Display Properties window.</p>
+<p>- A new icon has been added to the toolbar to toggle the window always being 
+  on top. The 'w' key may also be used. Previously this was only possible using 
+  the Display Properties window.</p>
+<p>- A new icon has been added to the toolbar to toggle the grid. The 'g' key 
+  may also be used.</p>
+<p>- The Mount Objects window has a new button: Mount Wheels. With a standard 
+  TGE wheeled vehicle object in view, select a tire object from the drop-down 
+  list. Then click on the 'Mount Wheels' button (there is no need to select a 
+  hub from the right node list). The wheel will automatically be mounted to each 
+  of the hub nodes and oriented correctly based on which side of the vehicle the 
+  hub is on.</p>
+<p>- A new button and window have been added: Shape Properties. Clicking on the 
+  Refresh button on the Shape Properties window will generate an outline of the 
+  currently viewed shape using the standard TGE tsDump facility. Clicking on the 
+  Export button will save the currently viewed object's tsDump to the file 'dtsdump.txt' 
+  into the same directory as the Looking Glass executable. These features will 
+  be expanded upon in future releases.</p>
+<p>&nbsp;</p>
+<p><b>July 30, 2004:</b></p>
+<p>- The program now uses the Windows' mouse cursor rather than the TGE-drawn 
+  mouse cursor. The main advantage is the cursor doesn't disappear when it is 
+  in the window's title bar, making it easier to drag the window.</p>
+<p></p>
+<p>- An hour glass mouse cursor will now be shown when the program is busy.</p>
+<p>- It is now possible to resize the main window to any dimensions, including 
+  minimized and maximized.</p>
+<p>- It is now possible to have texture maps that are larger than 512x512 in size. 
+  2048x2048 with an alpha channel has been tested. Please note that standard TGE 
+  does not handle texture maps that are this large.</p>
+<p>- Added FPS and MSPF rows to the HUD. While this would not be an indication 
+  of how well your objects will perform in game, it does provide something to 
+  compare your objects relative to each other. This may be turned on and off under 
+  the General tab on the Display Properties window.</p>
+<p>- It is now possible to view a node's local coordinates. This is selected from 
+  the drop down list at the bottom left of the main window that includes a node's 
+  world coordinates and an object's bounding box dimensions.</p>
+<p>- When the Looking Glass is not the foreground window, it puts itself to sleep 
+  for a short while between screen redraws. This allows other applications more 
+  time at the CPU. This may not be desirable if the Looking Glass is playing back 
+  an animation on a second monitor while another program is being used on the 
+  main monitor (the animation playback will be jerky). The user may change how 
+  long the program sleeps (even setting it to zero milliseconds) when in the background 
+  under the General tab on the Display Properties window.</p>
+<p>- It is now possible to view all of the vertices that the selected node has 
+  influence over. This may be toggled on or off either from the Render tab of 
+  the Display Properties window, or the small 'V' button beside the Node drop 
+  down list. The colour that the vertices are drawn in depends on the weighting 
+  of the node on the them (0% weight to 100% weight). These colours may be changed 
+  under the Render tab of the Display Properties window. You'll also find there 
+  a preview of what the colours look like at the various weights. Note that this 
+  currently only works for 'Skin' meshes and their nodes.</p>
+<p>- Added a Help drop-down to the main screen. There are a number of options 
+  from this menu. The first labeled 'Contents' opens a web browser to the local 
+  documentation files. The second labeled 'Help on the Web' is meant to go to 
+  a support forum, but for the moment goes to www.gnometech.com. The third labeled 
+  'About OpenGL' displays some OpenGL and screen info. This will be expanded in 
+  the future. The fourth labeled 'About Looking Glass' opens a window with the 
+  usual information about the software.</p>
+<p>- It is now possible to give a Project Directory a name. Sometimes a project 
+  directory may be really long or only different from a previous project directory 
+  by one directory. This can make finding the correct directory in the Project 
+  Directory drop-down difficult. The name may be assigned using the optional 'Name' 
+  field in the Project Directory dialog window that is opened when the '[modify]' 
+  option is selected in the Project Directory drop-down menu.</p>
+<p>- The licensing window that is displayed when the user clicks on the 'Quit' 
+  button has been removed. Now the licensing information is displayed when the 
+  program is first launched and goes away when the first object has been loaded.</p>
+<p>&nbsp;</p>
+<p><b>July 13, 2004:</b></p>
+<p>- Added the ability to render the LOS collision meshes. This may be turned 
+  on under the Render tab of the Display Properties window and using the toolbar 
+  LoS icon.</p>
+<p>- Fixed a bug where using the Load Recent popup didn't always initiate the 
+  correct Project Directory, which would prevent the loading of some/all assets.</p>
+<p>- Added a toolbar icon to toggle the nodes display. The 'n' key may also be 
+  used.</p>
+<p>- It is now possible to reload an object that has been changed (such as with 
+  a 3D program) and see the changes within the viewer. Previously, once an object 
+  had been loaded, it would stay resident in memory and the file would no longer 
+  be accessed, even if the file had changed.</p>
+<p>- Mounted objects will now correctly show the appropriate detail level. To 
+  change how a mounted object is drawn (detail level wise) go to that object and 
+  either set the LOD manually, or turn on automatic LOD selection. Those settings 
+  carry over when the object is mounted to another object.</p>
+<p>- Improved how mounted objects animate. However the object has been setup (including 
+  multiple threads and moving the animation slider to a non-zero value) is how 
+  it will look when mounted. Note that if the object is animating while viewed, 
+  the animation will stop when viewing it mounted on another object. This should 
+  also correct a bug where mounting an object, then viewing it separately, and 
+  then going back to the mounted view could cause the mounted object to change 
+  its animation sequence.</p>
+<p>- Two new buttons have been added to the Mount Object Window. The Mount Left 
+  button will mount the object as if it were a left wheel in standard Torque, 
+  and the Mount Right button will mount the object as if it were a right wheel. 
+  The standard Mount button still exists and will mount an object without any 
+  added rotation.</p>
+<p>- When the user quits the program, the mouse now automatically moves to the 
+  OK button of the licensing window.</p>
+<p>- It is possible to set the program's window to always be on top of all other 
+  windows (Top-most window). This is toggled under the General tab of the Display 
+  Properties window.</p>
+<p>&nbsp;</p>
+<p><b>June 30, 2004:</b></p>
+<p>- The Sequence Info window now shows all trigger properties such as trigger 
+  state and activation position if the selected sequence contains one or more 
+  triggers. A column (Trig) has been added to the sequence list to indicate which 
+  sequences contain triggers.</p>
+<p>- If a sequence is selected that contains triggers, a white line will be drawn 
+  on the main sequence time slider in the position of each trigger.</p>
+<p>- The recently loaded files list now supports loading a DTS file and its corresponding 
+  CS file as if the user used the "Load DTS & CS" button. This is indicated with 
+  a "[cs]" shown beside the file name.</p>
+<p>- The Sequence Info window now shows all nodes that are used in the selected 
+  sequence. The node information scrolled window displays if the node has a translation, 
+  rotation or scale change in the selected sequence.</p>
+<p>- The Render tab on the Display Properties window has two additional option: 
+  a check box to draw all nodes that are used in the selected sequence in a 'bolded' 
+  fashion, and a drop down list to select the colour to draw the animated nodes 
+  in. If the 'Use node color' option is selected from the drop down list, then 
+  the animated nodes are drawn in the same colour as the non-animated nodes (selected 
+  from the Node Axis Color drop down list).</p>
+<p>- Holding down the ALT key and using the mouse wheel over the object view will 
+  change the object's detail level (and lock to that LOD). This is the same as 
+  using the left and right arrow keys.</p>
+<p>- Added the ability to load files from any directory. This is accessed from 
+  the Project Directory drop down list. By selecting a directory from the list, 
+  the internal resource manager will point to that directory and provide a listing 
+  of all valid files within the load dialog windows. If the [modify] option is 
+  selected, a new window opens to allow the user to add or remove directories. 
+  At this time, the directory pathway must be entered manually. Also note that 
+  all subdirectories are searched for valid files, so setting the project directory 
+  to C:\ will take a while (listen to the hard drive churn!). Note that if you 
+  load in an object from one project directory, move to another project directory 
+  and then bring up the load requestor that the already loaded object will show 
+  up in the list. Consider it a feature for now... :o)</p>
+<p>- When a file is loaded from the 'Load Recent' drop-down list, and the current 
+  project directory is not the same as the chosen file, the project directory 
+  will first change to that needed for the file and then change back. This may 
+  cause a slight delay in loading the object if there are a lot of files and subdirectories 
+  in the project directory.</p>
+<p>- A HUD has been added to show more information about the loaded object. The 
+  HUD options may be found on the Display Properties window under the General 
+  tab. The location of the HUD (and being able to turn it off) and its text colour 
+  may be changed. Currently the grid size and the viewed object detail level statistics 
+  may be displayed. The 'h' key may be used to toggle the HUD.</p>
+<p>&nbsp;</p>
+<p><b>June 20, 2004:</b></p>
+<p>- Added a 'rewind' button. If an animation sequence is playing, it will jump 
+  to the beginning and continue to play. If the sequence is paused, it will jump 
+  back to position 0 and stay paused.</p>
+<p>- Added an 'M' (for mip map base level) and 'D' (for detail level) to the item 
+  coordinate display. Each shows the current respective values. If a lock icon 
+  is displayed beside the 'D', then the user is manually controlling the value. 
+  If a lock icon is beside the 'M', then the user has locked the base and max 
+  mip map level to be the same.</p>
+<p>- Pressing the 'm' key will force the max mip map level to be the same as the 
+  current base mip map level. This effectively turns off mip mapping and leaves 
+  the textures at the currently displayed mip map level. This may also be controlled 
+  with a toolbar icon.</p>
+<p>- Pressing the 'd' key will toggle the manual control of detail levels. This 
+  may also be controlled with a toolbar icon.</p>
+<p>- With the left and right arrows, the user may manually control the current 
+  detail level. This is the same as using the detail level slider.</p>
+<p>- Added a drop down list above the item coordinates display. This allows the 
+  user to change the item coordinates display to show either a node's world coordinates 
+  or a selected object's local bounding box coordinates.</p>
+<p>- Added the Thread Controls window. From here it is possible to add new animation 
+  threads to play multiple sequences at once. There are also various controls 
+  for manipulating how sequences transition from one to another. This transitioning 
+  works even if there is a single thread. The 'TS' icon in the toolbar may be 
+  used to enable or disable animation sequence transitioning in addition to the 
+  checkbox located on the Thread Controls window.</p>
+<p>- The mini-slider in the Thread Controls window has multiple uses. Normally, 
+  it is just a mirror of the main animation slider. When there is a transition 
+  between sequences occurring, it will go from a yellow colour to a red colour 
+  to indicate how far along the transition is. If the transition is set to occur 
+  at the slider's position (rather than synchronized), then the mini-slider may 
+  be used to set where the transition will occur in the target sequence. In this 
+  case, the mini-slider will show a cyan (at the left) to blue (at the right) 
+  colour.</p>
+<p>- Added support for the numpad's Enter key in all text edit controls.</p>
+<p>- Added tabs to the Display Properties window to help break up the options, 
+  and to allow for more to be added without needing a bigger window. The current 
+  tabs are: General, Render, and Lights.</p>
+<p>- It is now possible to change the ambient and direct light colours. These 
+  options are found under the new Lights tab on the Display Properties window.</p>
+<p>- It is now possible to change the colours that the nodes and their connections 
+  are drawn in. It is also possible to disable the connections between the nodes 
+  using the 'Connect Nodes As' drop down list. These may be found under the Render 
+  tab.</p>
+<p>- Many more predefined colours have been added to the colour drop down lists.</p>
+<p>- When the user changes the angle of the direct light, a light box is displayed 
+  in the 3D view to give a better sense of where the light is being aimed. Under 
+  the Lights tab on the Display Window, the user may change the distance from 
+  the object that the light box is shown (given as a multiple of the object's 
+  radius). From here the user may also manually enter in a rotation for the direct 
+  light (using the SET button) as well as view in realtime the direct light's 
+  rotation.</p>
+<p>- Timed automatic texture cache flushing is now implemented. Currently, it 
+  is quite heavy-handed as the entire texture cache is flushed rather than just 
+  those that have changed. This may cause a slight hesitation in the cursor when 
+  the cache is being reloaded. To enable this, go to the Materials window and 
+  at the bottom there is a checkbox as well as a place to enter in how many seconds 
+  there should be between flushes. There is also an icon in the toolbar with a 
+  picture of a 'T' and a toilet that will turn on and off the timed flushing (the 
+  same as if the user clicked on the checkbox in the Materials window).</p>
+<p>- The page up and page down keys will now cycle the user through the loaded 
+  objects as if they were selected in the object drop down list.</p>
+<p>- A reference axis is now displayed when the user rotates or translates the 
+  view. The appearance of the reference axis is different depending on if a rotation 
+  or translation is being performed. This axis may be disabled under the General 
+  tab of the Display Properties.</p>
+<p>&nbsp;</p>
+<p><b>June 1, 2004 (first alpha release):</b></p>
+<p>- Loading of multiple DTS objects into their own view. DSQ files may be loaded 
+  individually or through a standard .cs file to import multiple animation sequences 
+  at once. Using the 'Load DTS & CS' button is like loading an object in the TGE 
+  showtool where the TSShapeConstructor is called in a script file with the same 
+  name as the DTS file. </p>
+<p>- A list of the last five loaded objects is available (will load only a DTS 
+  without first executing the script file, for now)</p>
+<p>- Multiple rendering formats: textured shaded, untextured shaded, flat shaded, 
+  textured wireframe, front face wireframe, wireframe, vertices, and bounding 
+  boxes. </p>
+<p>- User selectable bitmaps for environmental mapping -- See the Display Properties 
+  window (for choosing multiple emaps) or click on the 'EM' button at the top 
+  of the ShowTool (which will toggle that last chosen emap). </p>
+<p>- The light source may be moved around with the mouse in a 'trackball'-like 
+  fashion, or turned off for unobstructed viewing of the applied textures. While 
+  holding down the 'l' key, press the left mouse button and drag. This will move 
+  the primary light around. Clicking on the 'lightbulb with an arrow' button at 
+  the top of the ShowTool will toggle this mode on without needing to hold down 
+  the 'l' key. </p>
+<p>- The light source may be turned off by pressing the 'L' (shift-l) key, clicking 
+  the lightbulb button at the top of the ShowTool, or through the Display Properties 
+  window. </p>
+<p>- The current texture mip map level may be changed at any time with a key press. 
+  Use the up and down arrow keys to control this, and look at the 'Mip Map Base' 
+  value in the bottom left of the ShowTool </p>
+<p>- Textures may be flushed and reloaded with a key press. Press the 't' key 
+  or go to the Material List window and press the 'Flush Texture Cache' button. 
+</p>
+<p>- All material properties are displayed in the Material List window.</p>
+<p>- A user definable grid at 'ground level' -- see the Display Properties window 
+</p>
+<p>- The view background may be a solid colour (selected from a list or user defined) 
+  or a bitmap. A snapshot of a game's level could be used as the background. -- 
+  See the Display Properties window </p>
+<p>- All nodes and their parental links may be shown. -- See the Display Properties 
+  window </p>
+<p>- When a node is selected, its world position and rotation are shown as well 
+  as a graphical representation of the node's axis.</p>
+<p>- Individual object bounding boxes (rendered solid or wireframe) and collision 
+  meshes may be displayed. </p>
+<p>- Any loaded object may be mounted to any node on another object. -- Use the 
+  'CM' button at the top of the ShowTool to activate collision meshes. Use the 
+  button with a box on it at the top of the ShowTool to activate solid bounding 
+  boxes. Alternatively, go to the Display Properties window. </p>
+<p>- Levels of detail may be manually selected or automatically displayed as they 
+  would in game. -- See the Detail Levels window </p>
+<p>- Animation sequences may be played forwards or backwards at a user defined 
+  time scale. The sequence may also be scrubbed through using the animation slider 
+  control. -- The time scale is the text edit control at the bottom right. Be 
+  sure to press return after changing the value </p>
+<p>- All animation sequence attributes may be viewed using the Sequence Info window.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+</body>
+</html>

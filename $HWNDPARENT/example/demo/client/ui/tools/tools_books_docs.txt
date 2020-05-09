@@ -1,0 +1,13 @@
+   <lmargin%:2><just:right>
+<just:left><font:Arial Bold:24>Books, Documentation and TDN<font:Arial:16><just:right><bitmap:demo/client/ui/tools/book><just:left>
+
+<lmargin%:5><font:Arial:16>In order to help you develop the game you've always wanted to make, GarageGames now supplies over <a:www.garagegames.com/mg/projects/tge/>2000 pages of documentation and tutorials</a> for the Torque Game Engine.  Plus, there are two books available in your local bookstores that detail game development with the Torque Game Engine; <a:www.garagegames.com/index.php?sec=mg&mod=resource&page=view&qid=5638>"3D Game Programming All in One"</a> & <a:www.garagegames.com/index.php?sec=mg&mod=resource&page=view&qid=8600>"Advanced 3D Game Programming All in One"</a>, both by Ken Finney.  But the best thing to happen to Torque documentation is the new <a:tdn.garagegames.com>Torque Developer Network (TDN)</a>.
+
+So what is the <a:tdn.garagegames.com>Torque Developer Network (TDN)</a>?
+<lmargin%:5>• TDN is the OFFICIAL Torque reference site for coders, artists, project leaders, level editors, modelers... anyone working with a game or project using Torque. 
+• TDN has tons of documentation that is constantly being generated and updated by knowledgeable game developers. 
+• TDN has tutorials ranging from a simple "Hello, world" example to complex networking solutions. 
+• TDN contains White Papers and other professional research projects by leading game development universities. 
+• TDN helps you learn to take your game from idea to prototype to finished product with lots of How-Tos. 
+• TDN offers Game samples and Sample Chapters from many different game development books. 
+• TDN is written collaboratively by Torque developers. 

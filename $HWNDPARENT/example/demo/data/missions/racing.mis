@@ -1,0 +1,527 @@
+//--- OBJECT WRITE BEGIN ---
+new SimGroup(MissionGroup) {
+
+   new ScriptObject(MissionInfo) {
+         type = "racing";
+         name = "Racing Example";
+         desc0 = "This is a very simple racing example mission which illustrates the wheeled vehicle physics included in the engine.  Mission lighting only occurs the first time the mission is loaded.";
+   };
+   new MissionArea(MissionArea) {
+      Area = "-1024 -1024 2048 2048";
+      flightCeiling = "300";
+      flightCeilingRange = "20";
+         locked = "true";
+   };
+   new SimGroup(environment) {
+
+      new Sky(Sky) {
+         position = "336 136 0";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         materialList = "~/data/skies/sky_storm.dml";
+         cloudHeightPer[0] = "7";
+         cloudHeightPer[1] = "0.3";
+         cloudHeightPer[2] = "0.199973";
+         cloudSpeed1 = "0.0005";
+         cloudSpeed2 = "0.0002";
+         cloudSpeed3 = "0.001";
+         visibleDistance = "800";
+         fogDistance = "500";
+         fogColor = "0.4 0.4 0.4 1";
+         fogStorm1 = "0";
+         fogStorm2 = "1";
+         fogStorm3 = "0";
+         fogVolume1 = "0 0 0";
+         fogVolume2 = "0 0 0";
+         fogVolume3 = "0 0 0";
+         fogVolumeColor1 = "0.9 0.9 0.9 1";
+         fogVolumeColor2 = "0.9 0.9 0.9 1";
+         fogVolumeColor3 = "0 0 0 1";
+         windVelocity = "1 1 0";
+         windEffectPrecipitation = "0";
+         SkySolidColor = "0.64 0.148 0.215 0";
+         useSkyTextures = "1";
+         renderBottomTexture = "0";
+         noRenderBans = "0";
+            locked = "true";
+      };
+      new Sun() {
+         azimuth = "245";
+         elevation = "45";
+         color = "1 1 0.7 1";
+         ambient = "0.3 0.3 0.4 1";
+            direction = "0.56146 0.56146 -0.607886";
+            locked = "true";
+            rotation = "1 0 0 0";
+            scale = "1 1 1";
+            position = "0 0 0";
+      };
+      new fxSunLight(sunflare1) {
+         position = "98.5277 -289.053 188.13";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         Enable = "1";
+         LocalFlareBitmap = "common/lighting/corona";
+         RemoteFlareBitmap = "common/lighting/corona";
+         SunAzimuth = "224";
+         SunElevation = "10";
+         LockToRealSun = "1";
+         FlareTP = "1";
+         Colour = "1 0 0 1";
+         Brightness = "1";
+         FlareSize = "1.5";
+         FadeTime = "0.1";
+         BlendMode = "0";
+         AnimColour = "0";
+         AnimBrightness = "1";
+         AnimRotation = "1";
+         AnimSize = "1";
+         AnimAzimuth = "0";
+         AnimElevation = "0";
+         LerpColour = "1";
+         LerpBrightness = "1";
+         LerpRotation = "1";
+         LerpSize = "1";
+         LerpAzimuth = "1";
+         LerpElevation = "1";
+         LinkFlareSize = "0";
+         SingleColourKeys = "1";
+         MinColour = "0 0 0 1";
+         MaxColour = "1 1 1 1";
+         MinBrightness = "0.4";
+         MaxBrightness = "1";
+         MinRotation = "0";
+         MaxRotation = "359";
+         MinSize = "0.5";
+         MaxSize = "1";
+         MinAzimuth = "0";
+         MaxAzimuth = "359";
+         MinElevation = "-30";
+         MaxElevation = "210";
+         RedKeys = "AZA";
+         GreenKeys = "AZA";
+         BlueKeys = "AZA";
+         BrightnessKeys = "JAZJTAJ";
+         RotationKeys = "ZA";
+         SizeKeys = "ATAZA";
+         AzimuthKeys = "AZ";
+         ElevationKeys = "AZ";
+         ColourTime = "5";
+         BrightnessTime = "10";
+         RotationTime = "40";
+         SizeTime = "30";
+         AzimuthTime = "5";
+         ElevationTime = "5";
+      };
+      new fxSunLight(sunflare2) {
+         position = "72.9234 -289.051 187.692";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         Enable = "1";
+         LocalFlareBitmap = "common/lighting/corona";
+         RemoteFlareBitmap = "common/lighting/corona";
+         SunAzimuth = "224";
+         SunElevation = "10";
+         LockToRealSun = "1";
+         FlareTP = "1";
+         Colour = "1 1 0 1";
+         Brightness = "1";
+         FlareSize = "1.5";
+         FadeTime = "0.1";
+         BlendMode = "0";
+         AnimColour = "0";
+         AnimBrightness = "1";
+         AnimRotation = "1";
+         AnimSize = "0";
+         AnimAzimuth = "0";
+         AnimElevation = "0";
+         LerpColour = "1";
+         LerpBrightness = "1";
+         LerpRotation = "1";
+         LerpSize = "1";
+         LerpAzimuth = "1";
+         LerpElevation = "1";
+         LinkFlareSize = "0";
+         SingleColourKeys = "1";
+         MinColour = "0 0 0 1";
+         MaxColour = "1 1 1 1";
+         MinBrightness = "0.25";
+         MaxBrightness = "0.5";
+         MinRotation = "0";
+         MaxRotation = "359";
+         MinSize = "0.5";
+         MaxSize = "1";
+         MinAzimuth = "0";
+         MaxAzimuth = "359";
+         MinElevation = "-30";
+         MaxElevation = "210";
+         RedKeys = "AZA";
+         GreenKeys = "AZA";
+         BlueKeys = "AZA";
+         BrightnessKeys = "AZJTA";
+         RotationKeys = "AZ";
+         SizeKeys = "ATAZA";
+         AzimuthKeys = "AZ";
+         ElevationKeys = "AZ";
+         ColourTime = "5";
+         BrightnessTime = "6";
+         RotationTime = "80";
+         SizeTime = "5";
+         AzimuthTime = "5";
+         ElevationTime = "5";
+      };
+      new TerrainBlock(terrain) {
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         detailTexture = "~/data/terrains/details/detail1";
+         terrainFile = "./features.ter";
+         squareSize = "8";
+         bumpScale = "1";
+         bumpOffset = "0.01";
+         zeroBumpScale = "8";
+         tile = "1";
+            locked = "true";
+            position = "-1024 -1024 0";
+      };
+      new fxFoliageReplicator(ShortGrass) {
+         position = "-386.947 796.221 154.184";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         UseDebugInfo = "0";
+         DebugBoxHeight = "1";
+         HideFoliage = "0";
+         ShowPlacementArea = "0";
+         PlacementAreaHeight = "25";
+         PlacementColour = "0.4 0 0.8 1";
+         Seed = "1376312589";
+         FoliageFile = "~/data/shapes/plants/plant2";
+         FoliageCount = "1000";
+         FoliageRetries = "100";
+         InnerRadiusX = "0";
+         InnerRadiusY = "0";
+         OuterRadiusX = "30";
+         OuterRadiusY = "40";
+         MinWidth = "1";
+         MaxWidth = "3";
+         MinHeight = "1";
+         MaxHeight = "1";
+         FixAspectRatio = "1";
+         FixSizeToMax = "0";
+         OffsetZ = "0";
+         RandomFlip = "1";
+         UseCulling = "1";
+         CullResolution = "10";
+         ViewDistance = "60";
+         ViewClosest = "1";
+         FadeInRegion = "20";
+         FadeOutRegion = "1";
+         AlphaCutoff = "0.1";
+         GroundAlpha = "1";
+         SwayOn = "1";
+         SwaySync = "0";
+         SwayMagSide = "0.01";
+         SwayMagFront = "0.03";
+         MinSwayTime = "5";
+         MaxSwayTime = "10";
+         LightOn = "0";
+         LightSync = "0";
+         MinLuminance = "0.7";
+         MaxLuminance = "1";
+         LightTime = "5";
+         AllowOnTerrain = "1";
+         AllowOnInteriors = "0";
+         AllowOnStatics = "0";
+         AllowOnWater = "0";
+         AllowWaterSurface = "0";
+         AllowedTerrainSlope = "90";
+      };
+      new TSStatic() {
+         position = "315.775 40.0082 183.645";
+         rotation = "1 0 0 0";
+         scale = "1 1 1";
+         shapeName = "~/data/shapes/trees/tree3.dts";
+      };
+   };
+   new SimGroup(PlayerDropPoints) {
+
+      new SpawnSphere() {
+         position = "-148.082 884.711 196.718";
+         rotation = "0 0 -1 2.47371";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+      new SpawnSphere() {
+         position = "-141.334 876.925 196.262";
+         rotation = "0 0 -1 2.47371";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+      new SpawnSphere() {
+         position = "-231.17 1107.12 161.065";
+         rotation = "0 0 1 199.39";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+      new SpawnSphere() {
+         position = "-140.892 912.484 194.677";
+         rotation = "0 0 -1 10.4951";
+         scale = "1 1 1";
+         dataBlock = "SpawnSphereMarker";
+         radius = "1";
+         sphereWeight = "100";
+         indoorWeight = "100";
+         outdoorWeight = "100";
+            locked = "false";
+            lockCount = "0";
+            homingCount = "0";
+      };
+   };
+   new SimGroup(Buildings) {
+   };
+   new InteriorInstance() {
+      position = "-131.795 917.09 192.98";
+      rotation = "0 0 -1 8.02137";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/barrier1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-132.712 882.821 193.112";
+      rotation = "0 0 1 9.74035";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/barrier1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-210.068 1114.36 158.395";
+      rotation = "0 0 -1 112.873";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/barrier1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-333.846 848.488 154.841";
+      rotation = "-0.152803 -0.142578 0.977918 95.2405";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/wedge.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-213.138 568.133 147.487";
+      rotation = "0.116233 -0.109843 -0.987129 86.6763";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/wedge.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-357.272 497.436 164.997";
+      rotation = "0 0 1 112.873";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/arrowsign.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-220.044 476.387 155.583";
+      rotation = "0 0 1 20.0538";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/arrowsign.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-156.644 1104.9 170.703";
+      rotation = "0 0 -1 90.527";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/arrowsign.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-246.636 1089.27 162.629";
+      rotation = "0 0 1 204.156";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/arrowsign.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-221.443 830.139 202.262";
+      rotation = "0 0 1 20.0538";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/arrowsign.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-347.691 751.557 149.026";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/block1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-325.396 710.21 151.1";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/block1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-182.116 836.796 193.984";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/block1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-204.327 811.909 189.803";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/block1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-197.236 503.298 149.057";
+      rotation = "0 0 1 6.87505";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/barrier1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-264.683 628.919 174.106";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/tower1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-118.769 1134.51 186.72";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/tower1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-176.757 788.581 192.967";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/block1.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new InteriorInstance() {
+      position = "-342.687 926.283 158.366";
+      rotation = "0 0 1 189.832";
+      scale = "1 1 1";
+      interiorFile = "~/data/interiors/racing/arrowsign.dif";
+      useGLLighting = "0";
+      showTerrainInside = "0";
+   };
+   new TSStatic() {
+      position = "-230.723 1111.64 156.531";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-241.046 1105.3 160.211";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-207.744 962.747 202.315";
+      rotation = "-0.134466 -0.574288 0.807535 32.3388";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-206.526 984.166 195.35";
+      rotation = "0 0 1 44.1177";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-145.362 974.734 192.734";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-391.209 807.494 150.637";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-133.083 418.965 176.172";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-113.483 467.965 176.172";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-149.083 448.565 166.772";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-223.111 701.509 190.555";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-376.677 530.311 172.329";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+   new TSStatic() {
+      position = "-371.877 575.311 164.329";
+      rotation = "1 0 0 0";
+      scale = "1 1 1";
+      shapeName = "~/data/shapes/trees/shrub.dts";
+   };
+};
+//--- OBJECT WRITE END ---

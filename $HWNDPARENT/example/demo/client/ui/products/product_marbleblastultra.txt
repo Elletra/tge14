@@ -1,0 +1,11 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/products/marbleblast_box><just:left>
+<font:Arial Bold:24>MarbleBlast Ultra
+<font:Arial Bold:16>Developer:<font:Arial:16> GarageGames
+<font:Arial Bold:16>Publisher:<font:Arial:16> GarageGames
+<font:Arial Bold:16>Availability:<font:Arial:16> GarageGames.com, Gaming Portals, Xbox Live Arcade, and retail outlets.
+
+MarbleBlast Ultra
+
+<just:center><bitmap:demo/client/ui/products/marbleblast_ss>
+
+

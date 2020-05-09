@@ -1,0 +1,196 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(ProgramAboutDialog) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "200 117";
+      extent = "400 365";
+      minExtent = "8 2";
+      visible = "1";
+      text = "About";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(ProgramAboutDialog);";
+
+      new GuiButtonCtrl(PADOK) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "173 325";
+         extent = "55 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(ProgramAboutDialog);";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiText24Profile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "19 30";
+         extent = "362 28";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Torque ShowTool Pro by David Wyand";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "169 65";
+         extent = "61 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.gnometech.com\");";
+         text = "Contact Info:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "176 125";
+         extent = "47 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.garagegames.com\");";
+         text = "Built with:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "139 145";
+         extent = "121 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.garagegames.com\");";
+         text = "The Torque Game Engine";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "118 80";
+         extent = "164 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.gnometech.com\");";
+         text = "TheHeadGnome@gnometech.com";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "146 95";
+         extent = "109 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.gnometech.com\");";
+         text = "www.gnometech.com";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 300";
+         extent = "59 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Version 1.0:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(PADCompileTime) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "75 300";
+         extent = "118 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Compile Time";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(PADDebug) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "75 315";
+         extent = "71 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Debug Check";
+         maxLength = "255";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiBorderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 230";
+         extent = "392 61";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "./logos";
+         wrap = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "126 180";
+         extent = "148 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.garagegames.com\");";
+         text = "Synapse Gaming Lighting Pack";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "139 160";
+         extent = "122 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.garagegames.com\");";
+         text = "www.garagegames.com";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "134 195";
+         extent = "132 18";
+         minExtent = "8 2";
+         visible = "1";
+         command = "gotoWebPage(\"www.garagegames.com\");";
+         text = "www.synapsegaming.com";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

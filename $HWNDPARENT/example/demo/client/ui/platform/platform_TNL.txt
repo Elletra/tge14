@@ -1,0 +1,7 @@
+<lmargin%:2><just:center><bitmap:demo/client/ui/platform/torqueplatform><just:left>
+
+
+
+
+<font:Arial Bold:24><lmargin%:2>Torque Network Library (API)<font:Arial:16><lmargin%:5>
+Torque Network Library allows developers to take the Torque Game Engine's networking code to the next level. The Torque Network Library (TNL) is a robust, secure, easy to use cross-platform C++ networking API designed for high performance simulations and games. TNL is designed to be easy to integrate into existing products. In less than an hour, you can have a minimal TNL implementation up and running in your game or network product. Within weeks you can take advantage of all the advanced features of the TNL, allowing your game to support more players while using less bandwidth per client than any other solution on the market.

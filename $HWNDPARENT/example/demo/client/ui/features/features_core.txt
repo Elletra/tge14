@@ -1,0 +1,118 @@
+
+<font:Arial Bold:18><lmargin%:2>Below is a more detailed list of Torque Game Engine features grouped by area of interest.  This is by no means a complete feature list.
+<font:Arial:16>
+<spush><font:Arial Bold:18><lmargin%:2>Torque Core<spop>
+<lmargin%:5>• Multi-Platform
+• Windows server & client with OpenGL and DirectX
+• Mac OS 9/X server & client with OpenGL
+• Linux server & client with OpenGL
+• Journaling and Integrated hierarchical profiler
+• Math library, Vector, Matrix, Quaternion, etc.
+• Efficient memory manager with extensive debugging features
+• Resource Manager
+• File and Stream IO
+• Keyboard, Mouse and Joystick Input
+• SFX/Music driver using OpenAL
+• Spatial Database
+• Collision Testing
+• Vehicle Physics
+
+<spush><font:Arial Bold:18><lmargin%:2>Torque Script<spop>
+<lmargin%:5>• C++ like syntax
+• Local and Remote Debugging
+
+<spush><font:Arial Bold:18><lmargin%:2>Integrated Script Compiler<spop>
+<lmargin%:5>• Intermediate tokenized object format
+• On-demand compilation
+• Large complement of functions including math, object manipulation, fileIO, TCP/IP, etc.
+• Easily extend with plug-ins
+
+<spush><font:Arial Bold:18><lmargin%:2>Tools<spop>
+<lmargin%:5>• Complete source code for all tools
+• Milkshape and 3DStudio Max plug-ins, including an exporter and helper objects
+• Quark and WorldCraft converter and lighting
+• Integrated World Editor, GUI Editor, Terrain Editor, Terrain Generator
+
+<spush><font:Arial Bold:18><lmargin%:2>World Editor<spop>
+<lmargin%:5>• Integrated world builder
+• WYSIWYG
+• Construct, place, size, scale and rotate objects
+• Multi-level undo/redo
+• Edit object properties
+• Control lighting
+• Script object behaviors
+• Built-in terrain editor
+• Rule based fractal height field generator
+• Rule based fractal terrain texturing
+
+<spush><font:Arial Bold:18><lmargin%:2>GUI Editor<spop>
+<lmargin%:5>• Integrated GUI editor
+• WYSIWYG
+• Build fully scriptable interfaces
+• Includes set of default controls
+• Write custom controls
+• Extensive font support
+
+<spush><font:Arial Bold:18><lmargin%:2>Networking<spop>
+<lmargin%:5>• Award winning client/server architecture
+• Uses UDP and TCP
+• Packet stream manager
+• Object ghost manager with partial object updates
+• Bit level stream packing
+• String and message packing
+• Uses the optimal Notified Delivery Protocol
+
+<spush><font:Arial Bold:18><lmargin%:2>Rendering Engine<spop>
+<lmargin%:5>• Multi-pass texturing
+• Layered volumetric fog
+• Decals
+• Detail texturing
+• Environment mapping
+• Vertex and multi-pass lighting
+• True spherical distance fogging (for terrain, buildings)
+• Spherical distance clipping (for terrain, buildings)
+
+<spush><font:Arial Bold:18><lmargin%:2>Terrain Engine<spop>
+<lmargin%:5>• Continuous, seemless, LOD mesh generation (using screen error metrics)
+• Aggregated tile mip-mapping
+• Light mapped for hill and building shadows
+• Dynamically generated blend tiles
+• Altitude based fog banks
+• Seamless integration with the interior engine
+
+<spush><font:Arial Bold:18><lmargin%:2>Interior/Building Engine<spop>
+<lmargin%:5>• Portal based interiors
+• Seamless integration with the terrain engine
+• Detail brushes
+• Animated lightmaps
+• Buildings can be instanced, placed, manipulated and yes, scaled, with the world editor
+• Quark and Worldcraft converter
+
+<spush><font:Arial Bold:18><lmargin%:2>Mesh Engine<spop>
+<lmargin%:5>• Continuous level of detail based on a progressive mesh algorithm
+• Supports, bone, mesh, texture bitmap, texture coor. and visibilty animation
+• Mesh vertex deformation animation
+• Multi-bone mesh skeletal animation
+• Simple interface to multi-sequence animation manager
+• Damage detail level
+• Collision detail level
+• Projected object shadows (clipped against the environment)
+• 3DStudio Max & MilkShape exporters
+
+<spush><font:Arial Bold:18><lmargin%:2>Water Engine<spop>
+<lmargin%:5>• Continuous, seemless, LOD mesh generation (using screen error metrics) for large bodies of water
+• Dynamic waves
+• Multi-pass wave crest and shoreline textures
+• Integration with terrain and interior engines
+
+<spush><font:Arial Bold:18><lmargin%:2>Particle Engine<spop>
+<lmargin%:5>• Integrated with scripting engine
+• Animate texture and scale
+• Specify particle mass, drag, starting velocity, etc.
+• Sophisticated particle generators which can emit multiple particle types at once
+
+<spush><font:Arial Bold:18><lmargin%:2>Sound<spop>
+<lmargin%:5>• Multi-channel prioritized SFX manager
+• 3D sound support; panning, volume, doppler, cones
+• OpenAL
+

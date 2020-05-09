@@ -1,0 +1,278 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(RegisterDlg) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiColouredBox(REG_Background) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "800 600";
+      minExtent = "8 2";
+      visible = "1";
+      color = "0 0 0 255";
+      color2 = "0 0 0 255";
+      opaque = "1";
+      gradientDir = "0";
+   };
+
+   new GuiWindowCtrl() {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "264 74";
+      extent = "326 425";
+      minExtent = "8 2";
+      visible = "1";
+      text = "Register Torque ShowTool Pro";
+      maxLength = "255";
+      resizeWidth = "0";
+      resizeHeight = "0";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      minSize = "50 50";
+
+      new GuiTextEditCtrl(REG_edit) {
+         profile = "GuiTextEditProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 349";
+         extent = "306 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+      };
+      new GuiButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "73 383";
+         extent = "80 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "RegisterDlg.doRegister();";
+         text = "Register";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiButtonCtrl(REG_CancelBut) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "173 383";
+         extent = "80 30";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(RegisterDlg);";
+         text = "Cancel";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiColouredBox() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 30";
+         extent = "306 256";
+         minExtent = "8 2";
+         visible = "1";
+         color = "255 255 255 255";
+         color2 = "0 0 0 255";
+         opaque = "1";
+         gradientDir = "0";
+
+         new GuiBitmapCtrl() {
+            profile = "GuiDefaultProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "25 0";
+            extent = "256 256";
+            minExtent = "8 2";
+            visible = "1";
+            bitmap = "./productlogo";
+            wrap = "0";
+         };
+         new GuiTextCtrl() {
+            profile = "GuiText24Profile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "96 177";
+            extent = "113 28";
+            minExtent = "8 2";
+            visible = "1";
+            text = "Registration";
+            maxLength = "255";
+         };
+         new GuiTextCtrl(REG_TryoutExp) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "65 215";
+            extent = "175 18";
+            minExtent = "8 2";
+            visible = "0";
+            text = "Your 30 day trial period has expired!";
+            maxLength = "255";
+         };
+         new GuiTextCtrl(REG_PleaseReg) {
+            profile = "GuiTextProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "75 215";
+            extent = "155 18";
+            minExtent = "8 2";
+            visible = "0";
+            text = "Please register your Ignition Key";
+            maxLength = "255";
+         };
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 330";
+         extent = "296 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Please enter your Ignition Key as assigned by GarageGames:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 300";
+         extent = "142 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Your Off-Line Registration ID:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(REG_GUID) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "160 300";
+         extent = "101 18";
+         minExtent = "8 2";
+         visible = "1";
+         maxLength = "255";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function RegisterDlg::onWake(%this)
+{
+   if($ThirtyDayOver == true)
+   {
+      REG_PleaseReg.setVisible(0);
+	  REG_Background.setVisible(1);
+   } else
+   {
+      REG_TryoutExp.setVisible(0);
+	  REG_Background.setVisible(0);
+   }
+
+   REG_GUID.setValue(iGetMachineGUID());
+}
+
+function RegisterDlg::doRegister(%this)
+{
+   
+   %ret = iRegisterProduct( REG_edit.getValue() );
+   
+   if( %ret == 0 ) // Success
+   {
+      %this.regSucceed();
+      return;
+   }
+   else if( %ret == 1 ) // Wait
+   {
+      %status = iGetRegistrationStatus();
+      while( %status == 1 )
+      {
+         %status = iGetRegistrationStatus();
+      }
+      
+      switch( %status )
+      {
+         case 0:
+            // Woot
+            %this.regSucceed();
+            return;
+         case 2:
+            %errorString = "The key you have entered is invalid. Please make sure that your key appears exactly as it does in 'My Garage'.";
+         case 3:
+            %errorString = "This Ignition key has been disabled, please contact GarageGames for more information.";
+         case 4:
+            %errorString = "There was an error connecting to the Ignition server, please try again later. If this problem persists, please contact GarageGames.";
+         case 5:
+            %errorString = "The Ignition server has encountered an internal error, please try again later. If this problem persists, please contact GarageGames.";
+      }
+      
+      if( %errorString !$= "" )
+      {
+         if( $UseSysMessageBox )
+            sysMessageBoxOK( "Torque ShowTool Pro", %errorString );
+         else
+            MessageBoxOK( "Torque ShowTool Pro", %errorString );
+      }
+      else
+      {
+         Canvas.popDialog( %this );
+      }
+   }
+   else
+   {
+      switch( %ret )
+      {
+         case 2:
+            %errorString = "The key you have entered is invalid. Please make sure that your key appears exactly as it does in 'My Garage'.";
+         case 3:
+            %errorString = "This Ignition key has been disabled, please contact GarageGames for more information.";
+         case 4:
+            %errorString = "There was an error connecting to the Ignition server, please try again later. If this problem persists, please contact GarageGames.";
+         case 5:
+            %errorString = "The Ignition server has encountered an internal error, please try again later. If this problem persists, please contact GarageGames.";
+         
+         case -1:
+            %errorString = "An unknown error has occured.";
+      }
+      
+      if( $UseSysMessageBox )
+         sysMessageBoxOK( "Torque ShowTool Pro", %errorString );
+      else
+         MessageBoxOK( "Torque ShowTool Pro", %errorString );
+   }
+}
+
+function RegisterDlg::regSucceed(%this)
+{
+   if( $UseSysMessageBox )
+      sysMessageBoxOK( "Torque ShowTool Pro", "Thank you for registering Torque ShowTool Pro " @ iGetUserName() );
+   else
+      MessageBoxOK( "Torque ShowTool Pro", "Thank you for registering Torque ShowTool Pro " @ iGetUserName() );
+      
+   Canvas.popDialog( %this );
+   Canvas.popDialog( ThirtyDayTrialDlg ); //*** Also pop the 30-day dialog
+
+   //*** If the 30-day trial was up and only this dialog is visible, we need to bring back up
+   //*** the exporter interface
+   if($ThirtyDayOver == true)
+   {
+      startExporter();
+   }
+}

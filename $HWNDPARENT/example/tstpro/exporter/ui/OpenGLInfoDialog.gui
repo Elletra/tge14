@@ -1,0 +1,248 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(OpenGLInfoDialog) {
+   profile = "GuiDefaultProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 2";
+   visible = "1";
+
+   new GuiWindowCtrl(OpenGLInfoWindow) {
+      profile = "GuiWindowProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "249 133";
+      extent = "256 257";
+      minExtent = "8 2";
+      visible = "1";
+      text = "OpenGL Info";
+      maxLength = "255";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "1";
+      canMaximize = "1";
+      minSize = "50 50";
+      closeCommand = "Canvas.popDialog(OpenGLInfoDialog);";
+
+      new GuiButtonCtrl(LADOK) {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "100 225";
+         extent = "55 25";
+         minExtent = "8 2";
+         visible = "1";
+         command = "Canvas.popDialog(OpenGLInfoDialog);";
+         text = "OK";
+         groupNum = "-1";
+         buttonType = "PushButton";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 90";
+         extent = "39 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Vendor:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 105";
+         extent = "48 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Renderer:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 120";
+         extent = "41 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Version:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiText24Profile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "5 29";
+         extent = "171 28";
+         minExtent = "8 2";
+         visible = "1";
+         text = "OpenGL Statistics";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 145";
+         extent = "133 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Current Screen Information:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 165";
+         extent = "49 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Color Bits:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 180";
+         extent = "52 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Depth Bits:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 195";
+         extent = "56 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Stencil Bits:";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(OGLIDVendor) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 90";
+         extent = "12 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "??";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(OGLIDRenderer) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 105";
+         extent = "12 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "??";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(OGLIDVersion) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 120";
+         extent = "12 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "??";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(OGLIDColorBits) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 165";
+         extent = "12 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "??";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(OGLIDDepthBits) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 180";
+         extent = "12 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "??";
+         maxLength = "255";
+      };
+      new GuiTextCtrl(OGLIDStencilBits) {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "70 195";
+         extent = "12 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "??";
+         maxLength = "255";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiBorderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "183 25";
+         extent = "68 35";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "./ogl_sm";
+         wrap = "0";
+      };
+      new GuiTextCtrl() {
+         profile = "GuiTextProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "10 70";
+         extent = "88 18";
+         minExtent = "8 2";
+         visible = "1";
+         text = "Driver Information:";
+         maxLength = "255";
+      };
+      new GuiControl() {
+         profile = "GuiBorderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 65";
+         extent = "248 3";
+         minExtent = "8 2";
+         visible = "1";
+      };
+      new GuiControl() {
+         profile = "GuiBorderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 140";
+         extent = "248 3";
+         minExtent = "8 2";
+         visible = "1";
+      };
+      new GuiControl() {
+         profile = "GuiBorderProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 215";
+         extent = "248 3";
+         minExtent = "8 2";
+         visible = "1";
+      };
+   };
+};
+//--- OBJECT WRITE END ---

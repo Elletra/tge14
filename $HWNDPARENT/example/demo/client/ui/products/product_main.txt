@@ -1,0 +1,9 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/products/productsnew><just:left>
+
+<font:Arial Bold:24>Torque Products<font:Arial:16> 
+
+While the Torque Game Engine is often referred to as a first person shooter engine because of the notoriety of Vivendi/Universal's AAA game, Tribes2, the Torque Game Engine is capable of much more...  
+
+On the following pages and in the adjacent screenshots we highlight several products using the Torque Game Engine and show just how flexible the engine is.  Developers are taking the Torque Game Engine and producing unique, high quality games in short order.  Everything from robots to fishing, cartoon tennis to multiplayer first person shooters are all being developed with the same engine.
+
+You do not need reinvent the wheel to create your game. Leverage the dozens of man years of coding in the Torque Game Engine and focus on coding your game and making it FUN.

@@ -1,0 +1,10 @@
+<lmargin%:2><just:right>
+<just:left><font:Arial Bold:24>Torque Lighting Kit<font:Arial:16><just:right><bitmap:demo/client/ui/tools/LightingKit><just:left>
+
+<lmargin%:5>The Synapse Gaming Torque Lighting Kit is a powerful new toolkit for the Torque Game Engine that enhances Torque's lighting and rendering models, and adds flexible mission objects that significantly increase modeling possibilities.
+
+The Torque Lighting Kit's toolkit adds new mission light objects capable of illuminating multiple interiors, DTS objects and terrain - unlike interior light entities which only illuminate interiors. The light objects can be configured as static or dynamic, omni or spotlights, and can even cast shadows. The light objects also allow static DTS objects to cast shadows onto interiors and terrain, visually integrating them into levels and preventing them from looking out of place.
+
+<a:www.garagegames.com/products/36>More information about Torque Lighting Kit</a>
+
+<just:center><bitmap:demo/client/ui/tools/lightingkitscreen>

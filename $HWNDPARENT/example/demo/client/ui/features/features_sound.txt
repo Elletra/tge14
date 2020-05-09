@@ -1,0 +1,11 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/features/ss_ae>
+<just:left><font:Arial Bold:18>OpenAL Audio<font:Arial:16>
+<lmargin%:5>The Torque Game Engine uses OpenAL as its cross-platform 3D audio API. OpenAL is an industry standard audio API used in many popular games as well as other types of audio applications.  Torque adds extensions to simplify many common gaming audio tasks.
+
+<lmargin%:2><font:Arial Bold:18>Feature Highlights:<font:Arial:16><lmargin%:5>
+• Uses OpenAL: an industry standard multi-platform audio API
+• Multi-channel prioritized audio manager
+• 3D Positional sound support with Doppler and cone emitters
+• 2D sound support with panning, pitch and volume
+• Looping controls
+• Audio resource management

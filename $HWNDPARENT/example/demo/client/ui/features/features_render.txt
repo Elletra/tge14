@@ -1,0 +1,17 @@
+<lmargin%:2><just:right><bitmap:demo/client/ui/features/ss_re>
+<just:left><font:Arial Bold:18>Rendering Engine Overview<font:Arial:16>
+<lmargin%:5>The scenegraph based rendering system in the Torque Game Engine supports a wide array of rendering tasks: from vast terrains to detailed interior spaces, animated meshes and clouded skys all seamlessly integrate together producing stunning scenery.  The next couple pages provide an overview of the major rendering sub-systems.
+
+<lmargin%:2><font:Arial Bold:18>Feature Highlights:<font:Arial:16><lmargin%:5>
+• Terrain rendering
+• Interior rendering
+• Sky and environmental effects
+• Complex animated meshes
+• Multi-pass texturing
+• Layered volumetric fog
+• Decals
+• Detail texturing
+• Environment mapping
+• Vertex and multi-pass lighting
+• True spherical distance fogging (for terrain, buildings)
+• Spherical distance clipping (for terrain, buildings)

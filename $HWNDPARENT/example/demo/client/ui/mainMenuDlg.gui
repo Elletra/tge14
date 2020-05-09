@@ -1,0 +1,200 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiControl(MainMenuDlg) {
+   profile = "GuiModelessDialogProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "800 600";
+   minExtent = "8 8";
+   visible = "1";
+      helpTag = "0";
+      title = "Torque SDK Feature Demo";
+
+   new GuiControl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "22 51";
+      extent = "756 498";
+      minExtent = "8 2";
+      visible = "1";
+         helpTag = "0";
+
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "4 19";
+         extent = "243 291";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "./tower";
+         wrap = "0";
+            helpTag = "0";
+      };
+      new GuiBitmapCtrl(racing) {
+         profile = "GuidefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "-18 296";
+         extent = "291 223";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "./racing";
+         wrap = "0";
+            helpTag = "0";
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "467 22";
+         extent = "302 242";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "./editor";
+         wrap = "0";
+            helpTag = "0";
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "224 73";
+         extent = "285 85";
+         minExtent = "8 2";
+         visible = "1";
+         command = "MainMenuGui.pushThread(overview_thread);";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "./button";
+            helpTag = "0";
+
+         new GuiMLTextCtrl() {
+            profile = "GuiMLTextNoSelectProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 7";
+            extent = "260 60";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+ 						text = "<color:ffffff><shadowcolor:000000><shadow:1:1><font:Arial Bold:19>Torque Game Engine Overview\n<font:Arial Bold:14>Explore the Torque Game Engine features, tools, documentation, licensing, community and publishing opportunities.";
+            allowSelection = "0";
+               helpTag = "0";
+         };
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "224 164";
+         extent = "285 85";
+         minExtent = "8 2";
+         visible = "1";
+         command = "loadFeatureMission();";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "./button";
+            helpTag = "0";
+
+         new GuiMLTextCtrl() {
+            profile = "GuiMLTextNoSelectProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 7";
+            extent = "260 46";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+            text = "<color:ffffff><shadowcolor:000000><shadow:1:1><font:Arial Bold:19>Interactive Engine Walkthrough\n<font:Arial Bold:14>3D interactive demo walkthrough of many of the key features in the engine such as terrain, animation, particles, etc.";
+            allowSelection = "1";
+               helpTag = "0";
+         };
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "224 255";
+         extent = "285 85";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$Client::GameType=\"fps\"; MainMenuGui.pushThread(play_game_thread);";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "./button";
+            helpTag = "0";
+
+         new GuiMLTextCtrl() {
+            profile = "GuiMLTextNoSelectProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 7";
+            extent = "260 32";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+            text = "<color:ffffff><shadowcolor:000000><shadow:1:1><font:Arial Bold:19>Example: FPS Multiplayer\n<font:Arial Bold:14>First Person Shooter Demo based on an early version of Realm Wars, a multiplayer community driven project.";
+            allowSelection = "1";
+               helpTag = "0";
+         };
+      };
+      new GuiBitmapButtonCtrl() {
+         profile = "GuiButtonProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "224 346";
+         extent = "285 85";
+         minExtent = "8 2";
+         visible = "1";
+         command = "$Client::GameType=\"racing\"; MainMenuGui.pushThread(play_game_thread);";
+         text = "Button";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         bitmap = "./button";
+            helpTag = "0";
+
+         new GuiMLTextCtrl() {
+            profile = "GuiMLTextNoSelectProfile";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            position = "9 7";
+            extent = "260 32";
+            minExtent = "8 2";
+            visible = "1";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+						text = "<color:ffffff><shadowcolor:000000><shadow:1:1><font:Arial Bold:19>Example: Multiplayer Racing\n<font:Arial Bold:14>Racing demo featuring multiplayer vehicle physics on a simple off-road track with jumps and obstacles.";
+            allowSelection = "1";
+               helpTag = "0";
+         };
+      };
+      new GuiBitmapCtrl() {
+         profile = "GuiDefaultProfile";
+         horizSizing = "right";
+         vertSizing = "bottom";
+         position = "477 243";
+         extent = "242 217";
+         minExtent = "8 2";
+         visible = "1";
+         bitmap = "./orc";
+         wrap = "0";
+            helpTag = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+
